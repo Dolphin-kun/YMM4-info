@@ -8,7 +8,6 @@ import { Footer } from '../Footer';
 import { DefaultHeader } from './DefaultHeader';
 import { DefaultMobileMenu } from './DefaultMobileMenu';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 type Props = WithChildren;
 
@@ -46,7 +45,6 @@ export const DefaultLayout = ({ children }: Props) => {
       >
         <Footer />
       <Analytics />
-      <SpeedInsights />
       </Box>
     </Stack>
   );
