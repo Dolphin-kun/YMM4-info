@@ -1,5 +1,5 @@
 import { SITE_NAME } from '@/config/app';
-import { GitHub, Google, XIcon } from '@mui/icons-material';
+import { GitHub, Google, X } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 import { Container } from './Container';
 import { Link } from './Link';
@@ -37,7 +37,7 @@ export const Footer = () => {
                 <GitHub sx={{ fontSize: 32 }} />
               </Link>
               <Link href="#" aria-label="link to X(Twitter) Account">
-                <XIcon sx={{ fontSize: 32 }} />
+                <X sx={{ fontSize: 32 }} />
               </Link>
               <Link href="#" aria-label="link to Google Account">
                 <Google sx={{ fontSize: 32 }} />
