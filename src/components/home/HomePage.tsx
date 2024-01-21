@@ -33,9 +33,9 @@ export const HomePage = ({
             </Typography>
           </Stack>
           <Typography component="span" css={paragraphStyles}>
-            Next.js と MDX を使用したサイトを手軽に作りましょう。
+            YMM4に関する情報をまとめています。
           </Typography>
-          <LinkButton href="/docs/quick-start">Quick Start</LinkButton>
+          //<LinkButton href="/docs/quick-start">Quick Start</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
