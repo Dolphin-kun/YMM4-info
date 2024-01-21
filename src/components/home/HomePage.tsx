@@ -41,7 +41,7 @@ export const HomePage = ({
         <Stack alignItems="flex-start" spacing={8}>
           <Typography variant="h2">Tips</Typography>
           <Typography css={paragraphStyles}>
-          YMM4に関係する機能や編集のコツがあります。
+          YMM4に関係する機能や編集のコツなど
             <br />
           </Typography>
           <Stack spacing={4}>
