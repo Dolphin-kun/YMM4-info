@@ -7,6 +7,7 @@ import { Container } from '../Container';
 import { Footer } from '../Footer';
 import { DefaultHeader } from './DefaultHeader';
 import { DefaultMobileMenu } from './DefaultMobileMenu';
+import { Analytics } from '@vercel/analytics/react';
 
 type Props = WithChildren;
 
@@ -43,6 +44,7 @@ export const DefaultLayout = ({ children }: Props) => {
         }}
       >
         <Footer />
+      <Analytics />
       </Box>
     </Stack>
   );
