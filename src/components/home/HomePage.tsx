@@ -35,7 +35,7 @@ export const HomePage = ({
           <Typography component="span" css={paragraphStyles}>
             YMM4に関する情報をまとめています。
           </Typography>
-          //<LinkButton href="/docs/quick-start">Quick Start</LinkButton>
+          <LinkButton href="/docs/quick-start">Quick Start</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
