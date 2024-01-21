@@ -7,7 +7,7 @@ import {
   FacebookShareButton,
   LineIcon,
   LineShareButton,
-  TwitterIcon,
+  XIcon,
   TwitterShareButton,
 } from 'react-share';
 
@@ -30,9 +30,9 @@ export const Share = ({ title }: Props) => {
         title={title}
         url={url}
         via={SITE_NAME}
-        related={[SITE_NAME, 'Next.js']}
+        related={[SITE_NAME]}
       >
-        <TwitterIcon size={ICON_SIZE} round />
+        <XIcon size={ICON_SIZE} round />
       </TwitterShareButton>
       <LineShareButton title={title} url={url}>
         <LineIcon size={ICON_SIZE} round />
