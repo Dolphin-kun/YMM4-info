@@ -30,7 +30,7 @@ export const Share = ({ title }: Props) => {
         title={title}
         url={url}
         via={SITE_NAME}
-        related={SITE_NAME}
+        related={[SITE_NAME, 'YMM4']}
       >
         <TwitterIcon size={ICON_SIZE} round />
       </TwitterShareButton>
