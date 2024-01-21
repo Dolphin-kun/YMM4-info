@@ -35,13 +35,13 @@ export const HomePage = ({
           <Typography component="span" css={paragraphStyles}>
             YMM4に関する情報をまとめています。
           </Typography>
-          <LinkButton href="/docs/quick-start">Quick Start</LinkButton>
+          <LinkButton href="/docs/quick-start">YMM4 基本機能</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
-          <Typography variant="h2">ブログ</Typography>
+          <Typography variant="h2">Tips</Typography>
           <Typography css={paragraphStyles}>
-            MDXを使えばサクッとリッチなブログサイトが構築できます。
+          YMM4に関係する機能や編集のコツがあります。
             <br />
           </Typography>
           <Stack spacing={4}>
@@ -62,7 +62,7 @@ export const HomePage = ({
               );
             })}
           </Stack>
-          <LinkButton href="/blog/page/1">See More Posts</LinkButton>
+          <LinkButton href="/blog/page/1">See More Tips</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
