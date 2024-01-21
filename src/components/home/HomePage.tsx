@@ -31,14 +31,6 @@ export const HomePage = ({
             >
               {SITE_NAME}
             </Typography>
-            <Typography
-              component="span"
-              fontSize="3rem"
-              fontWeight={900}
-              lineHeight={1}
-            >
-              Site Template
-            </Typography>
           </Stack>
           <Typography component="span" css={paragraphStyles}>
             Next.js と MDX を使用したサイトを手軽に作りましょう。
