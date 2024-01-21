@@ -34,6 +34,8 @@ export const HomePage = ({
           </Stack>
           <Typography component="span" css={paragraphStyles}>
             YMM4に関する情報をまとめています。
+            <br />
+            非公式です。
           </Typography>
           <LinkButton href="/docs/quick-start">YMM4 基本機能</LinkButton>
         </Stack>
@@ -42,7 +44,7 @@ export const HomePage = ({
           <Typography variant="h2">Tips</Typography>
           <Typography css={paragraphStyles}>
           YMM4に関係する機能や編集のコツなど
-            <br />
+          <br />
           </Typography>
           <Stack spacing={4}>
             {frontmatters.map((frontmatter) => {
