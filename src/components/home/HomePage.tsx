@@ -64,7 +64,7 @@ export const HomePage = ({
               );
             })}
           </Stack>
-          <LinkButton href="/blog/page/1">See More Tips</LinkButton>
+          <LinkButton href="/tips/page/1">See More Tips</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>

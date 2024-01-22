@@ -11,7 +11,7 @@ export default function Page({ frontmatters }: Props) {
   return <HomePage frontmatters={frontmatters} />;
 }
 
-const BASE_PATH = 'blog/posts/';
+const BASE_PATH = 'tips/posts/';
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const frontmatters = getAllFrontmatters(BASE_PATH);

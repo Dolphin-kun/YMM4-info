@@ -40,7 +40,7 @@ export default function Page({ frontmatters, tag }: Props) {
   );
 }
 
-const BASE_PATH = 'blog/posts';
+const BASE_PATH = 'tips/posts';
 
 type Params = NextParsedUrlQuery & {
   slug: string;

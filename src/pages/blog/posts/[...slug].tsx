@@ -29,7 +29,7 @@ export default function Page({ mdxSource }: Props) {
         <Typography variant="h1">{title}</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {tags.map((tag) => (
-            <PostTag key={tag} href={`/blog/tags/${tag}`} label={tag} />
+            <PostTag key={tag} href={`/tips/tags/${tag}`} label={tag} />
           ))}
         </Stack>
         <Typography component="span">Author: {author}</Typography>
@@ -45,7 +45,7 @@ export default function Page({ mdxSource }: Props) {
   );
 }
 
-const BASE_PATH = 'blog/posts';
+const BASE_PATH = 'tips/posts';
 
 type Params = NextParsedUrlQuery & {
   slug: string[];
