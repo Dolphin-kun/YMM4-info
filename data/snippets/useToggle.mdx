@@ -1,0 +1,18 @@
+---
+title: 'UseToggle Hook'
+---
+# UseToggle Hook
+
+```tsx
+import { useCallback, useState } from 'react';
+
+export const useToggle = (initial = false) => {
+  const [state, setState] = useState(initial);
+
+  const toggle = useCallback(() => {
+    setState((b) => !b);
+  }, []);
+
+  return [state, toggle];
+};
+```
