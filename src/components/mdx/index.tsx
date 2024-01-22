@@ -48,6 +48,16 @@ export const components: {
       {...props}
     />
   ),
+  img: (props: any) => (
+    <Box
+      component="img"
+      sx={{
+        maxWidth: '100%', // 画像が親要素の幅を超えないようにする
+        height: 'auto',   // アスペクト比を保ったまま高さを調整
+      }}
+      {...props}
+    />
+  ),
   h1: (props: any) => <Typography variant="h1" {...props} />,
   h2: (props: any) => (
     <Typography
