@@ -22,6 +22,8 @@ export default function Page({ mdxSource }: Props) {
   const { scope } = mdxSource;
   const { title, image, author, date, tags } = scope;
 
+  console.log('Page コンポーネント内の title:', title);
+
   return (
     <DefaultPage withToc>
       <Stack spacing={4}>
