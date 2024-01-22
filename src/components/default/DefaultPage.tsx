@@ -12,11 +12,11 @@ type DefaultPageProps = PageProps & {
   withToc?: boolean;
 };
 
-export const DefaultPage = ({ 
-  withToc = false, 
-  title, description, image, ...props 
+export const DefaultPage = ({
+  withToc = false,
+  ...props
 }: DefaultPageProps) => {
-  return withToc ? <PageWithToc title={title} description={description} image={image} {...props} /> : <Page title={title} description={description} image={image} {...props} />;
+  return withToc ? <PageWithToc {...props} /> : <Page {...props} />;
 };
 
 
