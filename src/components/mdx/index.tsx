@@ -48,19 +48,6 @@ export const components: {
       {...props}
     />
   ),
-    img: (props: any) => (
-    <Box
-      component="img"
-      sx={{
-        maxWidth: '100%',
-        height: 'auto',
-        borderRadius: '0.375rem',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        // 他のスタイリングプロパティを必要に応じて追加
-      }}
-      {...props}
-    />
-  ),
   h1: (props: any) => <Typography variant="h1" {...props} />,
   h2: (props: any) => (
     <Typography
