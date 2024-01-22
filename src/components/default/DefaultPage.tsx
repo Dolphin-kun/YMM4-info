@@ -11,13 +11,22 @@ type PageProps = WithChildren & React.ComponentPropsWithoutRef<typeof Seo>;
 type DefaultPageProps = PageProps & {
   withToc?: boolean;
 };
-
+/*元
 export const DefaultPage = ({
   withToc = false,
   ...props
 }: DefaultPageProps) => {
   return withToc ? <PageWithToc {...props} /> : <Page {...props} />;
 };
+*/
+//追加
+export const DefaultPage = ({ 
+  withToc = false, 
+  title, description, image, ...props 
+}: DefaultPageProps) => {
+  return withToc ? <PageWithToc title={title} description={description} image={image} {...props} /> : <Page title={title} description={description} image={image} {...props} />;
+};
+
 
 const Page = ({ children, title, description, image }: PageProps) => {
   return (
