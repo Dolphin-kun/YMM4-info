@@ -7,7 +7,7 @@ export const docsRoutes: Routes = [
   },
   {
     label: 'クイックスタート',
-    path: '/docs/quick-start',
+    path: '/docs/start-up',
   },
   {
     label: 'チュートリアル',
