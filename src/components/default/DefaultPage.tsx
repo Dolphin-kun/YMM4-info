@@ -21,7 +21,6 @@ export const DefaultPage = ({
 
 
 const Page = ({ children, title, description, image }: PageProps) => {
-  console.log('Title in Page:', title); // デバッグメッセージ
   return (
     <>
       <Seo title={title} description={description} image={image} />
@@ -31,7 +30,6 @@ const Page = ({ children, title, description, image }: PageProps) => {
 };
 
 const PageWithToc = ({ children, title, description, image }: PageProps) => {
-  console.log('Title in Page Mobile:', title); // デバッグメッセージ
   return (
     <>
       <Seo title={title} description={description} image={image} />
