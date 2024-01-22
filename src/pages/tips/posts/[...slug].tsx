@@ -37,6 +37,7 @@ export default function Page({ mdxSource }: Props) {
           <Image src={image} alt={`cover image - ${title}`} />
         </Box>
         <Share title={title} />
+        <Seo title={title} description={description} image={image} />
       </Stack>
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
