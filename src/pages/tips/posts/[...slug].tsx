@@ -66,6 +66,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
   const slug = params!.slug;
   const mdxSource = await getMdxBySlug(BASE_PATH, slug);
 
+  console.log("date: ", mdxSource.scope.date); // 追加
+
   return {
     props: {
       mdxSource,
