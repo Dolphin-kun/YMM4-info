@@ -23,7 +23,7 @@ export const Share = ({ title }: Props) => {
 
   return (
     <Stack direction="row" justifyContent="flex-end" spacing={5}>
-      <FacebookShareButton title={title} url={"\n"+url}>
+      <FacebookShareButton title={title} url={url}>
         <FacebookIcon size={ICON_SIZE} round />
       </FacebookShareButton>
       <TwitterShareButton
@@ -33,7 +33,7 @@ export const Share = ({ title }: Props) => {
       >
         <XIcon size={ICON_SIZE} round />
       </TwitterShareButton>
-      <LineShareButton title={title} url={"\n"+url}>
+      <LineShareButton title={title} url={url}>
         <LineIcon size={ICON_SIZE} round />
       </LineShareButton>
     </Stack>
