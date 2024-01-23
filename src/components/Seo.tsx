@@ -21,8 +21,6 @@ export const Seo = ({
 
   const titleText = title ? `${title} - ${SITE_NAME}` : SITE_NAME;
 
-  console.log("Title Seo: "+ title)
-
   return (
     <NextSeo
       title={titleText}
