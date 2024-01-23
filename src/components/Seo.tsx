@@ -40,6 +40,10 @@ export const Seo = ({
             type: 'image/png',
           },
         ],
+        siteName: SITE_NAME
+      }}
+      twitter={{
+        cardType: 'summary',
       }}
       additionalLinkTags={[{ rel: 'icon', href: resolveUrl('favicon.ico') }]}
     />
