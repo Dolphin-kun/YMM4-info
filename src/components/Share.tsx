@@ -27,10 +27,10 @@ export const Share = ({ title }: Props) => {
         <FacebookIcon size={ICON_SIZE} round />
       </FacebookShareButton>
       <TwitterShareButton
-        title={title}
+        title={title+"\n"}
         url={url}
         via={SITE_NAME}
-        related={[SITE_NAME]}
+        hashtags={SITE_NAME}
       >
         <XIcon size={ICON_SIZE} round />
       </TwitterShareButton>
