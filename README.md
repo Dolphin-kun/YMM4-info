@@ -12,7 +12,7 @@
 
 ## site
 
-https://ymm4-info.vercel.app
+https://ymm4-info.vercel.app  
 https://ymm-info.vercel.app
 
 ## License
@@ -23,6 +23,9 @@ MIT
 ## 追加情報
 ### imgの書き方
 
+![ALT](https://ymm4-info.vercel.app/assets/tips/posts/nextjs.png)
+
 ```mdx
 ![ALT](https://ymm4-info.vercel.app/assets/tips/posts/nextjs.png)
-絶対パス(リンク)のhttps://ymm4-info.vercel.app/以降はassetsから書いてください
+絶対パス(リンク)のhttps://ymm4-info.vercel.app/ 以降はassetsから書いてください
+```
