@@ -21,6 +21,7 @@ export const DefaultPage = ({
 
 
 const Page = ({ children, title, description, image }: PageProps) => {
+  console.log("Default Page Title: " + title);
   return (
     <>
       <Seo title={title} description={description} image={image} />
@@ -30,6 +31,7 @@ const Page = ({ children, title, description, image }: PageProps) => {
 };
 
 const PageWithToc = ({ children, title, description, image }: PageProps) => {
+  console.log("Default Page Title: " + title);
   return (
     <>
       <Seo title={title} description={description} image={image} />
