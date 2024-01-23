@@ -1,35 +1,28 @@
-# Next.js + MDX Site Template
+# YMM情報サイト
 
-Next.js と MDX で作るサイトのテンプレートです。
+[sub-tさんのテンプレート](https://github.com/sub-t/next-mdx-site)を使用したwebサイトです
 
-このテンプレート自体にブログページとドキュメントページを完備しており、ブログサイトとして使用することはもちろん、ドキュメントから拡張方法を学ぶことも可能です。
+下に注意点とmdxファイルの書き方を書いておきます
 
-## Library
+## 使用ライブラリ
 
 - Next.js
 - MUI
 - Emotion
 
-## Demo
+## site
 
-https://sub-t.github.io/next-mdx-site/
-
-## Development
-
-https://sub-t.github.io/next-mdx-site/docs/quick-start/
-
-## Tutorial
-
-https://sub-t.github.io/next-mdx-site/docs/tutorial/getting-started/
-
-## Guides
-
-https://sub-t.github.io/next-mdx-site/docs/guides/overview/
-
-## Deployment
-
-https://sub-t.github.io/next-mdx-site/docs/guides/deployment/
+https://ymm4-info.vercel.app
+https://ymm-info.vercel.app
 
 ## License
 
 MIT
+
+
+## 追加情報
+### imgの書き方
+
+```mdx
+![ALT](https://ymm4-info.vercel.app/assets/tips/posts/nextjs.png)
+絶対パス(リンク)のhttps://ymm4-info.vercel.app/以降はassetsから書いてください
