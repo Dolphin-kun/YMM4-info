@@ -21,7 +21,7 @@ export default function Page({ mdxSource }: Props) {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const { scope } = mdxSource;
-  const { title, image, author, date, tags } = scope;
+  const { title, description, image, author, date, tags } = scope;
 
   return (
     <DefaultPage withToc>
