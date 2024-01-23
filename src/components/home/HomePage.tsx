@@ -68,11 +68,11 @@ export const HomePage = ({
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
-          <Typography variant="h2">ドキュメント</Typography>
+          <Typography variant="h2">YMM4 導入方法</Typography>
           <Typography css={paragraphStyles}>
-            このサイトテンプレートの使い方や拡張方法はこちらからご覧になれます。
+            YMM4の導入方法はこちらからご覧になれます。
             <br />
-            チュートリアル形式の解説も掲載しております。
+            いざ！YMM4の世界へ！
           </Typography>
           <LinkButton href="/docs/overview">Get Started</LinkButton>
         </Stack>
