@@ -2,15 +2,15 @@ import { Routes } from './type';
 
 export const docsRoutes: Routes = [
   {
-    label: 'ドキュメント',
+    label: 'YMM4情報サイトとは',
     path: '/docs/overview',
   },
   {
-    label: 'クイックスタート',
+    label: 'YMM4 導入方法',
     path: '/docs/start-up',
   },
   {
-    label: 'チュートリアル',
+    label: '基本機能',
     pages: [
       { label: 'はじめに', path: '/docs/tutorial/getting-started' },
       {
@@ -29,7 +29,7 @@ export const docsRoutes: Routes = [
   },
 
   {
-    label: 'ガイド',
+    label: 'エフェクト',
     pages: [
       { label: 'はじめに', path: '/docs/guides/overview' },
       {
