@@ -11,6 +11,7 @@ import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   mdxSource: MdxSource;
@@ -24,6 +25,7 @@ export default function Page({ mdxSource }: Props) {
 
   return (
     <DefaultPage withToc>
+    <Seo title={title} description={description} image={image} />
       <Stack spacing={4}>
         <Typography component="time">{formatDate(date)}</Typography>
         <Typography variant="h1">{title}</Typography>
