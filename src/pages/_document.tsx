@@ -19,8 +19,8 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
 
-          <link rel="icon" type="image/png" sizes="32x32" href="https://ymm4-info.vercel.app/assets/image.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="https://ymm4-info.vercel.app/assets/image.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/assets/image.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/assets/image.png" />
 
           {(this.props as any).emotionStyleTags}
         </Head>
