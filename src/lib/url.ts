@@ -12,4 +12,4 @@ export const resolveUrl = (...paths: string[]) => {
 };
 
 export const getImageUrl = (image: string | undefined) =>
-  resolveUrl('assets', image ?? 'image.png');
+  resolveUrl('assets', image ?? 'https://raw.githubusercontent.com/Dolphin-kun/YMM4-info/main/public/assets/image.png');
