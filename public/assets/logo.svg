@@ -1,9 +1,12 @@
-<svg role="img" xmlns="http://www.w3.org/2000/svg"
- viewBox="0 0 512.000000 512.000000"
->
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+ preserveAspectRatio="xMidYMid meet">
 
-<title>YMM4情報サイト</title>
-
+<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
 <path d="M2370 5114 c-19 -2 -78 -9 -130 -15 -546 -62 -1086 -327 -1489 -730
 -404 -404 -649 -903 -733 -1494 -17 -118 -17 -512 0 -630 85 -596 331 -1095
 743 -1504 399 -396 899 -640 1484 -723 118 -17 512 -17 630 0 590 84 1091 330
@@ -45,4 +48,5 @@
 51 -2 2 -11 -17 -20 -43z"/>
 <path d="M4149 1903 c-13 -16 -12 -17 4 -4 16 13 21 21 13 21 -2 0 -10 -8 -17
 -17z"/>
+</g>
 </svg>
