@@ -43,7 +43,7 @@ export const Seo = ({
       twitter={{
         cardType: 'summary',
       }}
-      additionalLinkTags={[{ rel: 'icon', href: resolveUrl('favicon.ico') }]}
+      additionalLinkTags={[{ rel: 'icon', href: 'https://ymm4-info.vercel.app/favicon.ico' }]}
     />
   );
 };
