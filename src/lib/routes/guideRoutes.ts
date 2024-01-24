@@ -1,29 +1,29 @@
 import { Routes } from './type';
 
-export const docsRoutes: Routes = [
+export const guideRoutes: Routes = [
   {
     label: 'YMM4情報サイトとは',
-    path: '/docs/overview',
+    path: '/guide/overview',
   },
   {
     label: 'YMM4 導入方法',
-    path: '/docs/start-up',
+    path: '/guide/start-up',
   },
   {
     label: '基本機能',
     pages: [
-      { label: 'はじめに', path: '/docs/tutorial/getting-started' },
+      { label: 'はじめに', path: '/guide/tutorial/getting-started' },
       {
         label: 'スニペットを登録する',
-        path: '/docs/tutorial/create-snippet-data',
+        path: '/guide/tutorial/create-snippet-data',
       },
       {
         label: 'サイトのページに反映させる',
-        path: '/docs/tutorial/display-snippet-data',
+        path: '/guide/tutorial/display-snippet-data',
       },
       {
         label: '一覧ページを設ける',
-        path: '/docs/tutorial/create-snippets-list',
+        path: '/guide/tutorial/create-snippets-list',
       },
     ],
   },
@@ -31,16 +31,16 @@ export const docsRoutes: Routes = [
   {
     label: 'エフェクト',
     pages: [
-      { label: 'はじめに', path: '/docs/guides/overview' },
+      { label: 'はじめに', path: '/guide/guides/overview' },
       {
         label: '各種設定',
-        path: '/docs/guides/settings',
+        path: '/guide/guides/settings',
       },
-      { label: 'デプロイ', path: '/docs/guides/deployment' },
+      { label: 'デプロイ', path: '/guide/guides/deployment' },
     ],
   },
 ];
 
-export const allDocsRoutes: Routes = docsRoutes.flatMap((route) =>
+export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
   route.pages ? route.pages : [{ label: route.label, path: route.path }],
 );

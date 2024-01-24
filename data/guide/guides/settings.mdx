@@ -15,7 +15,7 @@
 本番環境で運用する際は、適宜変更を加えてください。
 
 また、デプロイ先を GitHub Pages にする場合は
-[こちら](/docs/guides/deployment/)
+[こちら](/guide/guides/deployment/)
 を参照してください。
 
 ## `config/app`
@@ -78,7 +78,7 @@ MDX ファイルの格納先です。データを格納している`data`配下�
 このプロジェクトでは
 
 - `data/blog/posts/xxx.mdx`と`pages/blog/posts/[...slug].tsx`
-- `data/docs/xxx/xxx.mdx`と`pages/docs/[...slug].tsx`
+- `data/guide/xxx/xxx.mdx`と`pages/guide/[...slug].tsx`
 
 が対応しています。管理と実装が容易であるため、このフォルダ構成を採用しています。
 実装はこの前提の下に成り立っているので、注意してください。詳しくは
@@ -90,10 +90,10 @@ MDX ファイルの格納先です。データを格納している`data`配下�
 
 ### `routes`
 
-`globalRoutes`と`docsRoutes`が格納されています。それぞれ
+`globalRoutes`と`guideRoutes`が格納されています。それぞれ
 
 - `globalRoutes`：サイト全体の案内
-- `docsRoutes`：ドキュメント内のリンク
+- `guideRoutes`：ドキュメント内のリンク
 
 を表しています。
 
@@ -312,12 +312,12 @@ MDX で使用するコンポーネントは
 から一括でエクスポートしています。
 
 コンポーネントの登録の仕方は
-[Using MDX with Next.js](https://nextjs.org/docs/advanced-features/using-mdx)
+[Using MDX with Next.js](https://nextjs.org/guide/advanced-features/using-mdx)
 や
 [next-mdx-remote のドキュメント](https://github.com/hashicorp/next-mdx-remote)
 を参照してください。
 
 ## MDX を直接使用する
 
-[Using MDX with Next.js](https://nextjs.org/docs/advanced-features/using-mdx)
+[Using MDX with Next.js](https://nextjs.org/guide/advanced-features/using-mdx)
 の設定を行っているので、直接 MDX ファイルを`pages`配下に置くことも可能です。

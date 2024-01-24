@@ -1,4 +1,4 @@
-import { DocsPage } from '@/components/docs';
+import { GuidePage } from '@/components/guide';
 import { components } from '@/components/mdx';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { MdxSource } from '@/types/mdx';
@@ -12,13 +12,13 @@ type Props = {
 
 export default function Page({ mdxSource }: Props) {
   return (
-    <DocsPage>
+    <GuidePage>
       <MDXRemote {...mdxSource} components={components} />
-    </DocsPage>
+    </GuidePage>
   );
 }
 
-const BASE_PATH = 'docs';
+const BASE_PATH = 'guide';
 
 type Params = NextParsedUrlQuery & {
   slug: string[];

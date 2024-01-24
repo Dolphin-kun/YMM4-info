@@ -7,6 +7,6 @@ export const globalRoutes: Routes = [
   },
   {
     label: 'ドキュメント',
-    path: '/docs/overview',
+    path: '/guide/overview',
   }
 ];

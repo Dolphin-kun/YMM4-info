@@ -8,7 +8,7 @@ type Props = {
   onMobileMenuButtonClick: () => void;
 };
 
-export const DocsHeader = ({ onMobileMenuButtonClick }: Props) => {
+export const GuideHeader = ({ onMobileMenuButtonClick }: Props) => {
   return (
     <Container>
       <Box component="header" css={headerStyles}>

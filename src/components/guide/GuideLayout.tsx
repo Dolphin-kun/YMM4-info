@@ -1,4 +1,4 @@
-import { docsRoutes } from '@/lib/routes/docsRoutes';
+import { guideRoutes } from '@/lib/routes/guideRoutes';
 import { HEADER_HEIGHT } from '@/styles/headerStyles';
 import { theme } from '@/styles/theme';
 import { WithChildren } from '@/types/common';
@@ -9,13 +9,13 @@ import { useEffect, useState } from 'react';
 import { Container } from '../Container';
 import { Footer } from '../Footer';
 import { ScrollArea } from '../ScrollArea';
-import { DocsHeader } from './DocsHeader';
+import { GuideHeader } from './GuideHeader';
 import { MobileMenu } from './MobileMenu';
 import { RoutesNav } from './RoutesNav';
 
 type Props = WithChildren;
 
-export const DocsLayout = ({ children }: Props) => {
+export const GuideLayout = ({ children }: Props) => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -39,7 +39,7 @@ export const DocsLayout = ({ children }: Props) => {
           backgroundColor: 'white',
         }}
       >
-        <DocsHeader
+        <GuideHeader
           onMobileMenuButtonClick={() => setIsMobileMenuOpen((state) => !state)}
         />
         <Box
@@ -64,7 +64,7 @@ export const DocsLayout = ({ children }: Props) => {
             >
               <ScrollArea>
                 <Box sx={{ p: 4 }}>
-                  <RoutesNav routes={docsRoutes} />
+                  <RoutesNav routes={guideRoutes} />
                 </Box>
               </ScrollArea>
             </Box>
@@ -95,7 +95,7 @@ export const DocsLayout = ({ children }: Props) => {
             >
               <ScrollArea>
                 <Box sx={{ py: 8, px: 2 }}>
-                  <RoutesNav routes={docsRoutes} />
+                  <RoutesNav routes={guideRoutes} />
                 </Box>
               </ScrollArea>
             </Box>

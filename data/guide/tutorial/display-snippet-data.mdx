@@ -1,6 +1,6 @@
 # サイトのページに反映させる
 
-ここでは、[スニペットを登録する](/next-mdx-site/docs/tutorial/getting-started/)
+ここでは、[スニペットを登録する](/next-mdx-site/guide/tutorial/getting-started/)
 にて登録したスニペットをサイトに掲載したいと思います。
 
 ## `pages`フォルダに`snippets`フォルダを追加する
@@ -12,7 +12,7 @@
 ## `[...slug].tsx`で動的なルーティングを行う
 
 `[...slug].tsx`を作成して
-[動的なルーティング](https://nextjs-ja-translation-docs.vercel.app/docs/routing/dynamic-routes)
+[動的なルーティング](https://nextjs-ja-translation-guide.vercel.app/guide/routing/dynamic-routes)
 を行います。
 
 ## 実装
@@ -67,20 +67,20 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 };
 ```
 
-実はこのコード、`src/pages/docs/[...slug].tsx`
+実はこのコード、`src/pages/guide/[...slug].tsx`
 の実装とほとんど変わりありません。
 
 変更箇所は 2 点
 
 ```diff
-- import { DocsPage } from '@/components/docs';
+- import { GuidePage } from '@/components/guide';
 + import { DefaultPage } from '@/components/default';
 
 ...
--    <DocsPage>
+-    <GuidePage>
 +    <DefaultPage>
       <MDXRemote {...mdxSource} components={components} />
--    </DocsPage>
+-    </GuidePage>
 +    </DefaultPage>
 
 ...
@@ -89,7 +89,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 と
 
 ```diff
-- const BASE_PATH = 'docs';
+- const BASE_PATH = 'guide';
 + const BASE_PATH = 'snippets';
 ```
 
@@ -106,5 +106,5 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 次に行うことは、スニペットの一覧ページの作成です。
 
 また、今回触れた`MDXRemote`の設定方法は
-[こちら](/docs/guides/settings/)
+[こちら](/guide/guides/settings/)
 を参照してください。

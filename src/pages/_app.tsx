@@ -1,5 +1,5 @@
 import { DefaultLayout } from '@/components/default';
-import { DocsLayout } from '@/components/docs';
+import { GuideLayout } from '@/components/guide';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
@@ -15,7 +15,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const router = useRouter();
 
   const isHome = router.pathname === '/';
-  const isDocs = router.pathname.includes('/docs');
+  const isGuide = router.pathname.includes('/guide');
 
   return (
     <>
@@ -28,10 +28,10 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
           <HomeLayout>
             <Component {...pageProps} />
           </HomeLayout>
-        ) : isDocs ? (
-          <DocsLayout>
+        ) : isGuide ? (
+          <GuideLayout>
             <Component {...pageProps} />
-          </DocsLayout>
+          </GuideLayout>
         ) : (
           <DefaultLayout>
             <Component {...pageProps} />

@@ -1,4 +1,4 @@
-import { allDocsRoutes } from '@/lib/routes/docsRoutes';
+import { allGuideRoutes } from '@/lib/routes/guideRoutes';
 import { HEADER_HEIGHT } from '@/styles/headerStyles';
 import { theme } from '@/styles/theme';
 import { WithChildren } from '@/types/common';
@@ -7,11 +7,11 @@ import { Accordion } from '../Accordion';
 import { ScrollArea } from '../ScrollArea';
 import { Seo } from '../Seo';
 import { Toc } from '../Toc';
-import { DocsPagination } from './DocsPagination';
+import { GuidePagination } from './GuidePagination';
 
 type Props = WithChildren & React.ComponentPropsWithoutRef<typeof Seo>;
 
-export const DocsPage = ({ children, title, description, image }: Props) => {
+export const GuidePage = ({ children, title, description, image }: Props) => {
   return (
     <>
       <Seo title={title} description={description} image={image} />
@@ -30,7 +30,7 @@ export const DocsPage = ({ children, title, description, image }: Props) => {
               </Accordion>
             </Box>
             <article>{children}</article>
-            <DocsPagination routes={allDocsRoutes} />
+            <GuidePagination routes={allGuideRoutes} />
           </Stack>
         </Grid>
         <Grid

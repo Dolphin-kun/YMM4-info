@@ -5,11 +5,11 @@ import { Box, Stack } from '@mui/system';
 import { useRouter } from 'next/dist/client/router';
 import { Link } from '../Link';
 
-type DocsPaginationProps = {
+type GuidePaginationProps = {
   routes: Routes;
 };
 
-export const DocsPagination = ({ routes }: DocsPaginationProps) => {
+export const GuidePagination = ({ routes }: GuidePaginationProps) => {
   const router = useRouter();
 
   const currentPagePath = router.asPath.split('#')[0];

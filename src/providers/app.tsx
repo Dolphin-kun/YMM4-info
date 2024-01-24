@@ -20,7 +20,7 @@ export const AppProvider = ({
   children,
 }: Props) => {
   const router = useRouter();
-  const isDocs = router.pathname.includes('/docs');
+  const isGuide = router.pathname.includes('/guide');
 
   return (
     <CacheProvider value={emotionCache}>
@@ -30,7 +30,7 @@ export const AppProvider = ({
           styles={{
             html: {
               scrollBehavior: 'smooth',
-              scrollPaddingTop: isDocs
+              scrollPaddingTop: isGuide
                 ? `calc(${HEADER_HEIGHT} + 16px)`
                 : '16px',
             },
