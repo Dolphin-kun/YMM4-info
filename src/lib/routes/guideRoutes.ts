@@ -34,6 +34,14 @@ export const guideRoutes: Routes = [
         label: '一覧ページを設ける',
         path: '/guide/tutorial/create-snippets-list',
       },
+      {
+        label: 'エフェクトアイテムの使い方',
+        path: '/guide/tutorial/effect-item',
+      },
+      {
+        label: '基本的な操作',
+        path: '/guide/tutorial/operation',
+      },
     ],
   },
 
