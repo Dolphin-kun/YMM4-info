@@ -74,7 +74,7 @@ export const HomePage = ({
             <br />
             いざ！YMM4の世界へ！
           </Typography>
-          <LinkButton href="/guide/start-up">Get Started</LinkButton>
+          <LinkButton href="/guide/YMM4/overview">Get Started</LinkButton>
         </Stack>
       </Box>
     </>
