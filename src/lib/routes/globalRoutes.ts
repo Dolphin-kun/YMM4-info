@@ -6,7 +6,7 @@ export const globalRoutes: Routes = [
     path: '/tips/page/1',
   },
   {
-    label: 'ドキュメント',
+    label: 'ガイド',
     path: '/guide/overview',
   }
 ];
