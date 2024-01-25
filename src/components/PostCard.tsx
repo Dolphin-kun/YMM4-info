@@ -44,7 +44,7 @@ export const PostCard = ({
                 flexShrink: 0,
                 width: matches ? '180px' : 'auto',
                 height: matches ? 'auto' : '120px',
-                aspectRatio: '3 / 2',
+                
               }}
             >
               <Image src={image} alt={`${title} image`} />
