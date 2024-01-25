@@ -57,9 +57,9 @@ export const guideRoutes: Routes = [
     ],
   },
       {
-        label: 'tips',
-        path: '/tips/page/1/',
-      },
+    label: 'tips',
+    path: '/tips/page/1/',
+  },
 ];
 
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
