@@ -6,8 +6,17 @@ export const guideRoutes: Routes = [
     path: '/guide/overview',
   },
   {
-    label: 'YMM4 導入方法',
-    path: '/guide/start-up',
+    label: 'YMM4とは',
+    pages: [
+      {
+        label: '概要',
+        path: '/guide/YMM4/overview',
+      },
+      {
+        label: '導入方法',
+        path: '/guide/YMM4/start-up',
+      },
+    ],
   },
   {
     label: '基本機能',
