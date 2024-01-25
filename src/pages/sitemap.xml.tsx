@@ -1,19 +1,13 @@
-import { GetServerSidePropsContext } from 'next';
+import { GetStaticProps } from 'next';
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { Readable } from 'stream';
 
-export const getServerSideProps = async ({ res }: GetServerSidePropsContext) => {
+export const getStaticProps: GetStaticProps = async () => {
   const xml = await generateSitemapXml(); // xmlコードを生成する処理
-  
-  console.log(xml)
-
-  res.statusCode = 200;
-  res.setHeader('Cache-Control', 's-maxage=86400, stale-while-revalidate'); // 24時間のキャッシュ
-  res.setHeader('Content-Type', 'text/xml');
-  res.end(xml);
 
   return {
     props: {},
+    revalidate: 86400, // 24時間のリバリデーション設定
   };
 };
 
