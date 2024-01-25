@@ -17,17 +17,15 @@ export const getServerSideProps = async ({ res }: GetServerSidePropsContext) => 
   };
 };
 
-async function generateSitemapXml():string {
-  // An array with your links
-  const links = [{ url: '/',  changefreq: 'daily', priority: 0.3  }];
-  // Create a stream to write to
-  const stream = new SitemapStream( { hostname: 'https://ymm4-info.vercel.app' } );
-  
-  // Return a promise that resolves with your XML string
+async function generateSitemapXml(): Promise<string> {
+  // 関数の中身は変更なし
+  const links = [{ url: '/', changefreq: 'daily', priority: 0.3 }];
+  const stream = new SitemapStream({ hostname: 'https://ymm4-info.vercel.app' });
+
   return streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
     data.toString()
   );
-};
+}
 
 const Page = () => null;
 export default Page;
