@@ -22,7 +22,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
   const slug = router.query.slug as string;
 
   const handleChange = (e: ChangeEvent<unknown>, page: number) => {
-    router.push(`/guideSecond/page/${page}`);
+    router.push(`/guideSecond/Effects/${page}`);
   };
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
     const nextPage = currentPage + 1;
 
     if (previousPage >= 1) {
-      router.prefetch(`/guideSecond/page/${previousPage}`);
+      router.prefetch(`/guideSecond/Effects/${previousPage}`);
     }
     if (nextPage <= pagesCount) {
-      router.prefetch(`/guideSecond/page/${nextPage}`);
+      router.prefetch(`/guideSecond/Effects/${nextPage}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath]);
