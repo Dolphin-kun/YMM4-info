@@ -21,19 +21,6 @@ export const guideRoutes: Routes = [
   {
     label: '基本機能',
     pages: [
-      { label: 'はじめに', path: '/guide/tutorial/getting-started' },
-      {
-        label: 'スニペットを登録する',
-        path: '/guide/tutorial/create-snippet-data',
-      },
-      {
-        label: 'サイトのページに反映させる',
-        path: '/guide/tutorial/display-snippet-data',
-      },
-      {
-        label: '一覧ページを設ける',
-        path: '/guide/tutorial/create-snippets-list',
-      },
       {
         label: 'エフェクトアイテムの使い方',
         path: '/guide/tutorial/effect-item',
