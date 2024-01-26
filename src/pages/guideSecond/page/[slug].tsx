@@ -22,7 +22,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
   const slug = router.query.slug as string;
 
   const handleChange = (e: ChangeEvent<unknown>, page: number) => {
-    router.push(`/Effects/page/${page}`);
+    router.push(`/guideSecond/page/${page}`);
   };
 
   useEffect(() => {
@@ -31,10 +31,10 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
     const nextPage = currentPage + 1;
 
     if (previousPage >= 1) {
-      router.prefetch(`/Effects/page/${previousPage}`);
+      router.prefetch(`/guideSecond/page/${previousPage}`);
     }
     if (nextPage <= pagesCount) {
-      router.prefetch(`/Effects/page/${nextPage}`);
+      router.prefetch(`/guideSecond/page/${nextPage}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath]);
@@ -45,11 +45,11 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
         <Typography variant="h1">Effects</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {tags.map((tag) => (
-            <PostTag key={tag} href={`/Effects/tags/${tag}`} label={tag} />
+            <PostTag key={tag} href={`/guideSecond/tags/${tag}`} label={tag} />
           ))}
           <PostTag
             key=""
-            href="/Effects/tags"
+            href="/guideSecond/tags"
             label="See More Tags"
             css={{
               background: 'transparent',
@@ -87,7 +87,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
   );
 }
 
-const BASE_PATH = 'Effects/pages';
+const BASE_PATH = 'guideSecond/pages';
 
 const POSTS_PER_PAGE = 4;
 const TAGS_COUNT = 2;
