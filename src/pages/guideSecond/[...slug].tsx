@@ -5,7 +5,7 @@ import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
@@ -16,8 +16,6 @@ type Props = {
 };
 
 export default function Page({ mdxSource }: Props) {
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
-
   const { scope } = mdxSource;
   const { title, description, tags } = scope;
 
