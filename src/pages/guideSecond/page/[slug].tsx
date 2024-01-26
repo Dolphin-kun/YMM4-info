@@ -65,7 +65,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
         </Stack>
         <Stack spacing={4}>
           {frontmatters.map((frontmatter) => {
-            const { title, description, path } =
+            const { title, description, image, path } =
               frontmatter;
 
             return (
