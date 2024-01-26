@@ -3,7 +3,6 @@ import { components } from '@/components/mdx';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
-import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { Box, Stack, Typography } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';

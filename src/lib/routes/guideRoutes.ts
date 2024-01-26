@@ -35,12 +35,12 @@ export const guideRoutes: Routes = [
   {
     label: 'エフェクト',
     pages: [
-      { label: 'はじめに', path: '/guide/guides/overview' },
+      { label: 'はじめに', path: '/guide/Effects/overview' },
       {
         label: '各種設定',
-        path: '/guide/guides/settings',
+        path: '/guide/Effects/ぼかし',
       },
-      { label: 'デプロイ', path: '/guide/guides/deployment' },
+      { label: 'デプロイ', path: '/guide/Effects/図形切り抜き' },
     ],
   },
 ];

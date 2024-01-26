@@ -79,13 +79,13 @@ export const HomePage = ({
 
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
-          <Typography variant="h2">深淵</Typography>
+          <Typography variant="h2">エフェクト</Typography>
           <Typography css={paragraphStyles}>
             開発中のページです。
             <br />
-            開発中のページです。
+            テスト配置です。
           </Typography>
-          <LinkButton href="/guideSecond/Effects/overview">深淵を覗く</LinkButton>
+          <LinkButton href="/guideSecond/Effects/overview">エフェクト一覧</LinkButton>
         </Stack>
 
       </Box>
