@@ -43,10 +43,6 @@ export const guideRoutes: Routes = [
       { label: 'デプロイ', path: '/guide/guides/deployment' },
     ],
   },
-      {
-    label: 'tips',
-    path: '/tips/page/1/',
-  },
 ];
 
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>

@@ -13,7 +13,7 @@ export default function Page({ titles }: Props) {
   return (
     <DefaultPage>
       <Stack spacing={6}>
-        <Typography variant="h1">Snippets</Typography>
+        <Typography variant="h1">Effects</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {titles.map((title) => (
             <PostTag key={title} href={`/Effects/${title}`} label={title} />
