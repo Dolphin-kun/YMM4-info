@@ -22,7 +22,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
   const slug = router.query.slug as string;
 
   const handleChange = (e: ChangeEvent<unknown>, page: number) => {
-    router.push(`/Effects/page/${page}`);
+    router.push(`/guide/Effects/${page}`);
   };
 
   useEffect(() => {
