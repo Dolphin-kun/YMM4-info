@@ -1,19 +1,42 @@
 import { DefaultPage } from '@/components/default';
 import { components } from '@/components/mdx';
+import { PostTag } from '@/components/PostTag';
+import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
+import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
+import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   mdxSource: MdxSource;
 };
 
 export default function Page({ mdxSource }: Props) {
+  const matches = useMediaQuery(theme.breakpoints.up('md'));
+
+  const { scope } = mdxSource;
+  const { title, description, tags } = scope;
+
   return (
-    <DefaultPage>
-      <MDXRemote {...mdxSource} components={components} />
+    <DefaultPage withToc>
+    <Seo title={title} description={description} />
+      <Stack spacing={4}>
+        <Typography variant="h1">{title}</Typography>
+        <Stack direction="row" flexWrap="wrap" spacing={2}>
+          {tags.map((tag) => (
+            <PostTag key={tag} href={`/guideSecond/tags/${tag}`} label={tag} />
+          ))}
+        </Stack>
+        <Typography component="span">Author: {author}</Typography>
+        <Share title={title} />
+      </Stack>
+      <Box sx={{ pt: 6 }}>
+        <MDXRemote {...mdxSource} components={components} />
+      </Box>
     </DefaultPage>
   );
 }
