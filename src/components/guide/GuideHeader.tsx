@@ -3,6 +3,7 @@ import { Menu } from '@mui/icons-material';
 import { Box, IconButton, Stack } from '@mui/material';
 import { Container } from '../Container';
 import { HomeLink } from '../HomeLink';
+import { Link } from '../Link';
 
 type Props = {
   onMobileMenuButtonClick: () => void;
