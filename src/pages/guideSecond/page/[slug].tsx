@@ -73,6 +73,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
                 key={path}
                 title={title}
                 description={description}
+                image={image}
                 href={path}
               />
             );
