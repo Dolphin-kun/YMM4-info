@@ -6,7 +6,7 @@ import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { Seo } from '@/components/Seo';
@@ -56,8 +56,8 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
 
 export const getStaticProps: GetStaticProps<Props, Params> = async ({
   params,
-}: GetStaticPropsContext) => {
-  const slug = params?.slug as string[];
+}) => {
+  const slug = params!.slug;
   const mdxSource = await getMdxBySlug(BASE_PATH, slug);
 
   return {
