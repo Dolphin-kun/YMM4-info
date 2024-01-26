@@ -17,7 +17,7 @@ export default function Page({ tags }: Props) {
         <Typography variant="h1">Tags</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {tags.map((tag) => (
-            <PostTag key={tag} href={`/guide/Effects/tags/${tag}`} label={tag} />
+            <PostTag key={tag} href={`/guide/tags/${tag}`} label={tag} />
           ))}
         </Stack>
       </Stack>
