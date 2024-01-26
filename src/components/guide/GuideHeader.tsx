@@ -1,3 +1,4 @@
+import { globalRoutes } from '@/lib/routes';
 import { headerStyles } from '@/styles/headerStyles';
 import { Menu } from '@mui/icons-material';
 import { Box, IconButton, Stack } from '@mui/material';
