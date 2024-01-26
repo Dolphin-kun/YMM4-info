@@ -25,7 +25,7 @@ export default function Page({ tags }: Props) {
   );
 }
 
-const BASE_PATH = 'Effects/posts';
+const BASE_PATH = 'guide/Effects';
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const frontmatters = getAllFrontmatters(BASE_PATH);

@@ -31,10 +31,10 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
     const nextPage = currentPage + 1;
 
     if (previousPage >= 1) {
-      router.prefetch(`/Effects/page/${previousPage}`);
+      router.prefetch(`/guide/Effects/${previousPage}`);
     }
     if (nextPage <= pagesCount) {
-      router.prefetch(`/Effects/page/${nextPage}`);
+      router.prefetch(`/guide/Effects/${nextPage}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.asPath]);
@@ -45,11 +45,11 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
         <Typography variant="h1">Effects</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {tags.map((tag) => (
-            <PostTag key={tag} href={`/Effects/tags/${tag}`} label={tag} />
+            <PostTag key={tag} href={`/guide/Effects/tags/${tag}`} label={tag} />
           ))}
           <PostTag
             key=""
-            href="/Effects/tags"
+            href="/guide/Effects/tags"
             label="See More Tags"
             css={{
               background: 'transparent',
@@ -89,7 +89,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
   );
 }
 
-const BASE_PATH = 'Effects/posts';
+const BASE_PATH = 'guide/Effects';
 
 const POSTS_PER_PAGE = 4;
 const TAGS_COUNT = 2;
