@@ -17,7 +17,7 @@ export default function Page({ tags }: Props) {
         <Typography variant="h1">Tags</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
           {tags.map((tag) => (
-            <PostTag key={tag} href={`/guideSecond/tags/${tag}`} label={tag} />
+            <PostTag key={tag} href={`/Effects/tags/${tag}`} label={tag} />
           ))}
         </Stack>
       </Stack>
@@ -25,7 +25,7 @@ export default function Page({ tags }: Props) {
   );
 }
 
-const BASE_PATH = 'guideSecond/posts';
+const BASE_PATH = 'Effects/posts';
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const frontmatters = getAllFrontmatters(BASE_PATH);

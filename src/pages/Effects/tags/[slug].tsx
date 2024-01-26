@@ -40,7 +40,7 @@ export default function Page({ frontmatters, tag }: Props) {
   );
 }
 
-const BASE_PATH = 'guideSecond/posts';
+const BASE_PATH = 'Effects/posts';
 
 type Params = NextParsedUrlQuery & {
   slug: string;
