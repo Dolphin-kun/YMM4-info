@@ -85,7 +85,7 @@ export const HomePage = ({
             <br />
             テスト配置です。
           </Typography>
-          <LinkButton href="/guideSecond/Effects/overview">エフェクト一覧</LinkButton>
+          <LinkButton href="/guideSecond/Effects/pages">エフェクト一覧</LinkButton>
         </Stack>
 
       </Box>
