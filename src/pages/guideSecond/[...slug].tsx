@@ -28,7 +28,6 @@ export default function Page({ mdxSource }: Props) {
             <PostTag key={tag} href={`/guideSecond/tags/${tag}`} label={tag} />
           ))}
         </Stack>
-        <Typography component="span">Author: {author}</Typography>
         <Share title={title} />
       </Stack>
       <Box sx={{ pt: 6 }}>
