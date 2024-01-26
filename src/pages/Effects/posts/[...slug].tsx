@@ -47,7 +47,7 @@ export default function Page({ mdxSource }: Props) {
   );
 }
 
-const BASE_PATH = 'guide/Effects';
+const BASE_PATH = 'Effects/posts';
 
 type Params = NextParsedUrlQuery & {
   slug: string[];
