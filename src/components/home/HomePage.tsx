@@ -76,18 +76,6 @@ export const HomePage = ({
           </Typography>
           <LinkButton href="/guide/YMM4/overview">Get Started</LinkButton>
         </Stack>
-
-        {spacer}
-        <Stack alignItems="flex-start" spacing={8}>
-          <Typography variant="h2">エフェクト</Typography>
-          <Typography css={paragraphStyles}>
-            開発中のページです。
-            <br />
-            テスト配置です。
-          </Typography>
-          <LinkButton href="/Effects/overview/">エフェクト一覧</LinkButton>
-        </Stack>
-
       </Box>
     </>
   );
