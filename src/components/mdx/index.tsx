@@ -75,7 +75,7 @@ export const components: {
         textAlign: 'center',
         width: '100%',
         padding: '10em',
-        '> th':{
+        '> thead > tr > th':{
           backgroundColor:lime[50],
           border: 1,
         },
