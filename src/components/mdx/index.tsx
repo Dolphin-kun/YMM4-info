@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { theme } from '@/styles/theme';
 import { Box, List, Typography } from '@mui/material';
-import { blue } from '@mui/material/colors';
+import { blue, lime } from '@mui/material/colors';
 import { CodeBlock } from '../CodeBlock';
 import { Link } from '../Link';
 
@@ -75,8 +75,9 @@ export const components: {
         textAlign: 'center',
         width: '100%',
         padding: '10em',
-        '> p':{
-          margin:'0px',
+        '> th':{
+          backgroundColor:lime[50],
+          border: 1,
         },
       }}
       {...props}
