@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { theme } from '@/styles/theme';
 import { Box, List, Typography } from '@mui/material';
+import { blue } from '@mui/material/colors';
 import { CodeBlock } from '../CodeBlock';
 import { Link } from '../Link';
 
@@ -53,11 +54,11 @@ export const components: {
       component="blockquote"
       sx={{
         padding: '10px 15px 10px 60px',
-        backgroundColor: theme.palette.blue[200],
+        backgroundColor: blue[200],
         color: theme.palette.grey[800],
         border: 1,
         borderRadius: '0.375rem',
-        borderColor: theme.palette.blue[800],
+        borderColor: blue[800],
       }}
       {...props}
     />

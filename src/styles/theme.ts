@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material/styles';
-import { blue } from '@mui/material/colors';
 
 export const theme = createTheme({
   typography: {
@@ -26,7 +25,4 @@ export const theme = createTheme({
     },
   },
   spacing: (factor: number) => `${0.25 * factor}rem`,
-  palette: {
-    blue: blue[500],
-  },
 });
