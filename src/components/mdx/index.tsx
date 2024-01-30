@@ -48,11 +48,25 @@ export const components: {
       {...props}
     />
   ),
+  blockquote: (props: any) => (
+    <Box
+      component="blockquote"
+      sx={{
+        padding: '10px 15px 10px 60px',
+        backgroundColor: theme.palette.blue[200],
+        color: theme.palette.grey[800],
+        border: 1,
+        borderRadius: '0.375rem',
+        borderColor: theme.palette.blue[800],
+      }}
+      {...props}
+    />
+  ),
   img: (props: any) => (
     <Box
       component="img"
       sx={{
-        maxWidth: '100%', // 画像が親要素の幅を超えないようにする
+        maxWidth: '90%', // 画像が親要素の幅を超えないようにする
         height: 'auto',   // アスペクト比を保ったまま高さを調整
       }}
       {...props}
