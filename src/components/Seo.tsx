@@ -41,7 +41,7 @@ export const Seo = ({
         siteName: SITE_NAME
       }}
       twitter={{
-        cardType: 'summary',
+        cardType: 'summary_large_image',
       }}
       additionalLinkTags={[
         { rel: 'icon', href: 'https://ymm4-info.vercel.app/favicon.ico' },

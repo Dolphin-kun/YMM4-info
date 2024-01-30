@@ -79,6 +79,9 @@ export const components: {
           backgroundColor:lime[50],
           border: 1,
         },
+        '> tbody > tr > td':{
+          border: 1,
+        },
       }}
       {...props}
     />
