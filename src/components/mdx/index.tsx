@@ -53,12 +53,31 @@ export const components: {
     <Box
       component="blockquote"
       sx={{
-        padding: '10px 15px 10px 60px',
-        backgroundColor: blue[200],
+        padding: '1em 1em 1em 1em',
+        backgroundColor: blue[50],
         color: theme.palette.grey[800],
         border: 1,
         borderRadius: '0.375rem',
         borderColor: blue[800],
+        '> p':{
+          margin:'0px',
+        },
+      }}
+      {...props}
+    />
+  ),
+  table: (props: any) => (
+    <Box
+      component="table"
+      sx={{
+        borderCollapse: 'collapse',
+        border: 1,
+        textAlign: 'center',
+        width: '100%',
+        padding: '10em',
+        '> p':{
+          margin:'0px',
+        },
       }}
       {...props}
     />
