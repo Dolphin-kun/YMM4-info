@@ -33,18 +33,18 @@ export const guideRoutes: Routes = [
   },
 
   {
-    label: 'エフェクト一覧',
+    label: '映像エフェクト',
     pages: [
       { 
         label: 'ランダム移動', 
         path: '/guide/Effects/animation/' + encodeURIComponent("ランダム移動"),
       },
       {
-        label: 'エフェクト2',
+        label: 'ぼかし',
         path: '/guide/Effects/animation/' + encodeURIComponent("ぼかし") ,
       },
       { 
-        label: 'エフェクト3', 
+        label: '図形切り抜き', 
         path: '/guide/Effects/animation/' + encodeURIComponent("図形切り抜き"), 
       },
     ],
