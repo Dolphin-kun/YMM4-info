@@ -3,6 +3,7 @@ export type Frontmatter = {
   description: string;
   image?: string;
   author: string;
+  version: string;
   date: string;
   tags: string[];
 };

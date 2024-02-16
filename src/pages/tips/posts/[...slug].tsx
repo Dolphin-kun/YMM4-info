@@ -21,7 +21,7 @@ export default function Page({ mdxSource }: Props) {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const { scope } = mdxSource;
-  const { title, description, image, author, date, tags } = scope;
+  const { title, description, image, author, version, date, tags } = scope;
 
   return (
     <DefaultPage withToc>
@@ -35,6 +35,7 @@ export default function Page({ mdxSource }: Props) {
           ))}
         </Stack>
         <Typography component="span">Author: {author}</Typography>
+        <Typography component="span">Version: {version}</Typography>
         <Box sx={{ width: '100%', height: matches ? 320 : 256 }}>
           <Image src={image} alt={`cover image - ${title}`} />
         </Box>
