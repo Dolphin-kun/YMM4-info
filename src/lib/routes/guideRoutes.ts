@@ -49,18 +49,16 @@ export const guideRoutes: Routes = [
       },
     ],
   },
-];
+].map(route => ({
+  ...route,
+  path: encodeURI(route.path),
+  pages: route.pages ? route.pages.map(page => ({
+    ...page,
+    path: encodeURI(page.path)
+  })) : undefined
+}));
 
-/*
+
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
   route.pages ? route.pages : [{ label: route.label, path: route.path }],
-);
-*/
-export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
-  route.pages 
-    ? route.pages.map(page => ({
-        label: page.label,
-        path: encodeURIComponent(page.path)
-      })) 
-    : [{ label: route.label, path: encodeURIComponent(route.path) }],
 );
