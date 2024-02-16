@@ -34,8 +34,7 @@ export default function Page({ mdxSource }: Props) {
             <PostTag key={tag} href={`/tips/tags/${tag}`} label={tag} />
           ))}
         </Stack>
-        <Typography component="span">Author: {author}</Typography>
-        <Typography component="span">Version: {version}</Typography>
+        <Typography component="span">Author: {author}  Version: {version}</Typography>
         <Box sx={{ width: '100%', height: matches ? 320 : 256 }}>
           <Image src={image} alt={`cover image - ${title}`} />
         </Box>

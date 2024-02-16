@@ -22,18 +22,18 @@ export const guideRoutes: Routes = [
     label: '基本機能',
     pages: [
       {
-        label: 'エフェクトアイテムの使い方',
-        path: '/guide/tutorial/effect-item',
+        label: '基本的な操作',
+        path: '/guide/基本機能/operation',
       },
       {
-        label: '基本的な操作',
-        path: '/guide/tutorial/operation',
+        label: 'エフェクトアイテムの使い方',
+        path: '/guide/基本機能/effect-item',
       },
     ],
   },
 
   {
-    label: 'エフェクト',
+    label: 'エフェクト一覧',
     pages: [
       { 
         label: 'エフェクト1', 
