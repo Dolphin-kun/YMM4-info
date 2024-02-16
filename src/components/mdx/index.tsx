@@ -92,6 +92,9 @@ export const components: {
       sx={{
         maxWidth: '90%', // 画像が親要素の幅を超えないようにする
         height: 'auto',   // アスペクト比を保ったまま高さを調整
+        border: 1,
+        padding: '10em',
+        borderColor: blue[800],
       }}
       {...props}
     />
