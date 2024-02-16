@@ -53,7 +53,8 @@ export const components: {
     <Box
       component="blockquote"
       sx={{
-        padding: '1em 1em 1em 1em',
+        margin: '0px',
+        padding: '1em',
         backgroundColor: blue[50],
         color: theme.palette.grey[800],
         border: 1,
