@@ -41,11 +41,11 @@ export const guideRoutes: Routes = [
       },
       {
         label: 'エフェクト2',
-        path: '/guide/Effects/bokashi',
+        path: '/guide/Effects/animation/ぼかし',
       },
       { 
         label: 'エフェクト3', 
-        path: '/guide/Effects/Zukei', 
+        path: '/guide/Effects/animation/図形切り抜き', 
       },
     ],
   },
