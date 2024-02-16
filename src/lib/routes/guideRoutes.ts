@@ -49,14 +49,7 @@ export const guideRoutes: Routes = [
       },
     ],
   },
-].map(route => ({
-  ...route,
-  path: encodeURI(route.path),
-  pages: route.pages ? route.pages.map(page => ({
-    ...page,
-    path: encodeURI(page.path)
-  })) : undefined
-}));
+];
 
 
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
