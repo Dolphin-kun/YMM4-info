@@ -1,5 +1,10 @@
 import { Routes } from './type';
 
+const data={
+  "ランダム移動": encodeURIComponent('ランダム移動')
+}
+
+
 export const guideRoutes: Routes = [
   {
     label: 'YMM4情報サイトとは',
@@ -37,15 +42,15 @@ export const guideRoutes: Routes = [
     pages: [
       { 
         label: 'ランダム移動', 
-        path: '/guide/Effects/animation/ランダム移動' ,
+        path: '/guide/Effects/animation/' + encodeURIComponent("ランダム移動"),
       },
       {
         label: 'エフェクト2',
-        path: '/guide/Effects/animation/ぼかし',
+        path: '/guide/Effects/animation/' + encodeURIComponent("ぼかし") ,
       },
       { 
         label: 'エフェクト3', 
-        path: '/guide/Effects/animation/図形切り抜き', 
+        path: '/guide/Effects/animation/' + encodeURIComponent("図形切り抜き"), 
       },
     ],
   },
