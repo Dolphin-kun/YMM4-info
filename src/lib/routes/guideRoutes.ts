@@ -53,5 +53,5 @@ export const guideRoutes: Routes = [
 
 
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
-  route.pages ? route.pages : [{ label: route.label, path: encodeURIComponent(route.path) }],
+  route.pages ? route.pages : [{ label: route.label, path: route.path }],
 );
