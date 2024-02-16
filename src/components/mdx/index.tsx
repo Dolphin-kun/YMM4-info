@@ -90,8 +90,8 @@ export const components: {
     <Box
       component="img"
       sx={{
-        maxWidth: '400px',
-        maxHeight: '400px',
+        display: 'block',
+        margin: 'auto',
         maxWidth: '90%', // 画像が親要素の幅を超えないようにする
         height: 'auto',   // アスペクト比を保ったまま高さを調整
         border: 1,

@@ -36,8 +36,8 @@ export const guideRoutes: Routes = [
     label: 'エフェクト一覧',
     pages: [
       { 
-        label: 'エフェクト1', 
-        path: '/guide/Effects/overview' ,
+        label: 'ランダム移動', 
+        path: '/guide/Effects/animation/ランダム移動' ,
       },
       {
         label: 'エフェクト2',
