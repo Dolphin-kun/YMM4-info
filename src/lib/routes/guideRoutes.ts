@@ -1,10 +1,5 @@
 import { Routes } from './type';
 
-const data={
-  "ランダム移動": encodeURIComponent('ランダム移動')
-}
-
-
 export const guideRoutes: Routes = [
   {
     label: 'YMM4情報サイトとは',
