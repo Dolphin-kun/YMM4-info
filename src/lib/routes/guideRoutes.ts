@@ -23,11 +23,11 @@ export const guideRoutes: Routes = [
     pages: [
       {
         label: '基本的な操作',
-        path: '/guide/基本機能/operation',
+        path: '/guide/' + encodeURIComponent("基本機能") + '/operation',
       },
       {
         label: 'エフェクトアイテムの使い方',
-        path: '/guide/基本機能/effect-item',
+        path: '/guide/' + encodeURIComponent("基本機能") + '/effect-item',
       },
     ],
   },
