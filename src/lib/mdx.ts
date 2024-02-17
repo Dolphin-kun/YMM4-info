@@ -5,6 +5,7 @@ import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from "remark-breaks";
 import { Frontmatter, FrontmatterWithPath } from '../types/fromtmatter';
 import { DATA_PATH, resolvePath } from './path';
 
@@ -17,7 +18,7 @@ export const getMdxBySlug = async (basePath: string, slug: string[]) => {
   const { data, content } = matter(source);
   const mdxSource = await serialize(content, {
     mdxOptions: {
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [remarkGfm,remarkBreaks],
       rehypePlugins: [rehypeSlug],
     },
     scope: data,
