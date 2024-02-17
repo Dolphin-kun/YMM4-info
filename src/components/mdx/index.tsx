@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { theme } from '@/styles/theme';
 import { Box, List, Typography } from '@mui/material';
-import { blue, lime } from '@mui/material/colors';
+import { blue, gray } from '@mui/material/colors';
 import { CodeBlock } from '../CodeBlock';
 import { Link } from '../Link';
 
@@ -76,7 +76,7 @@ export const components: {
         width: '100%',
         padding: '10em',
         '> thead > tr > th':{
-          backgroundColor:lime[50],
+          backgroundColor:gray[100],
           border: 1,
         },
         '> tbody > tr > td':{
@@ -124,7 +124,7 @@ export const components: {
   ),
   h4: (props: any) => (
     <Typography
-      variant="h3"
+      variant="h4"
       sx={{
         mt: 5,
       }}

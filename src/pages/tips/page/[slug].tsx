@@ -91,7 +91,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
 
 const BASE_PATH = 'tips/posts';
 
-const POSTS_PER_PAGE = 4;
+const POSTS_PER_PAGE = 10;
 const TAGS_COUNT = 2;
 
 type Params = NextParsedUrlQuery & {

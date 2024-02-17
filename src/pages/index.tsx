@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
   return {
     props: {
-      frontmatters: frontmatters.slice(0, 3),
+      frontmatters: frontmatters.slice(0, 5),
     },
   };
 };
