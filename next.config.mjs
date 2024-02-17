@@ -1,11 +1,12 @@
 import mdx from '@next/mdx';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
+import remarkBreaks from "remark-breaks";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
+  pageExtensions: ['ts', 'tsx', 'jsx','md', 'mdx'],
   compiler: {
     emotion: true,
   },
@@ -16,7 +17,7 @@ const nextConfig = {
 const withMDX = mdx({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm,remarkBreaks],
     rehypePlugins: [rehypeSlug],
     providerImportSource: '@mdx-js/react',
   },
