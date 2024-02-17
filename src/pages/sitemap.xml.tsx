@@ -1,5 +1,4 @@
 import { GetServerSideProps } from 'next';
-import { IncomingMessage, ServerResponse } from 'http';
 
 const EXTERNAL_DATA_URL = process.env.NEXT_PUBLIC_ROOT_URL;
 
