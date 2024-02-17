@@ -42,8 +42,8 @@ export const PostCard = ({
             <Box
               sx={{
                 flexShrink: 0,
-                width: maches ? '192px': 'auto',
-                height: maches ? 'auto': '108px',
+                width: matches ? '192px': 'auto',
+                height: matches ? 'auto': '108px',
                 aspectRatio: '16 / 9',
               }}
             >
