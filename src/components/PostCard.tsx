@@ -42,9 +42,9 @@ export const PostCard = ({
             <Box
               sx={{
                 flexShrink: 0,
-                width: matches ? '180px' : 'auto',
-                height: matches ? 'auto' : '120px',
-                aspectRatio: '3 / 2',
+                width: matches ? '1280px' : 'auto',
+                height: matches ? 'auto' : '720px',
+                aspectRatio: '16 / 9',
               }}
             >
               <Image src={image} alt={`${title} image`} />
