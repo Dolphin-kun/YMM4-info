@@ -1,5 +1,8 @@
 import { GetServerSideProps } from 'next'
 import { getServerSideSitemapLegacy, ISitemapField } from 'next-sitemap'
+import { DefaultPage } from '@/components/default';
+import { Typography } from '@mui/material';
+
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const res = await fetch('https://ymm4-info.vercel.app/')
@@ -18,7 +21,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return getServerSideSitemapLegacy(ctx, fields)
 }
 
-
-export default function Sitemap() {
-    return null;
-}
+export default function Page() {
+    return (
+      <DefaultPage>
+        <Typography variant="h1">xml</Typography>
+      </DefaultPage>
+    );
+  }
