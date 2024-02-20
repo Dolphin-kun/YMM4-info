@@ -1,11 +1,11 @@
 import { GetServerSideProps } from 'next'
-import { getServerSideSitemapLegacy } from 'next-sitemap'
+import { getServerSideSitemapLegacy, ISitemapField } from 'next-sitemap'
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const res = await fetch('https://ymm4-info.vercel.app/')
     const pageData = await res.json();
     console.log(res);
-    const fields = [];
+    const fields: ISitemapField[] = [];
 
     pageData.forEach((page) => {
         console.log(page)
