@@ -18,6 +18,24 @@ export const components: {
   ul: (props: any) => (
     <List component="ul" sx={{ mt: 6, mb: 0, fontSize: '15px' }} {...props} />
   ),
+  li: (props: any) => (
+    <Box
+      component="li"
+      sx={{
+        listStyle: 'inside',
+      }}
+      {...props}
+    />
+  ),
+  hr: (props: any) => (
+    <Box
+      component="hr"
+      sx={{
+        margin: '1em',
+      }}
+      {...props}
+    />
+  ),
   pre: CodeBlock,
   a: ({ href, ...props }: any) => (
     <Link
@@ -73,8 +91,7 @@ export const components: {
         borderCollapse: 'collapse',
         border: 1,
         textAlign: 'center',
-        width: '100%',
-        padding: '10em',
+        margin: '1em 0em',
         '> thead > tr > th':{
           backgroundColor:grey[100],
           border: 1,
@@ -90,6 +107,21 @@ export const components: {
   img: (props: any) => (
     <Box
       component="img"
+      sx={{
+        display: 'block',
+        margin: 'auto',
+        maxWidth: '90%', // 画像が親要素の幅を超えないようにする
+        maxHeight: '300px',
+        height: 'auto',   // アスペクト比を保ったまま高さを調整
+        border: 1,
+        borderColor: blue[800],
+      }}
+      {...props}
+    />
+  ),
+  iframe: (props: any) => (
+    <Box
+      component="iframe"
       sx={{
         display: 'block',
         margin: 'auto',
