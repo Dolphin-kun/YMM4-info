@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import a11yDark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
 import { CopyCodeButton } from './CopyCodeButton';
+import YouTube from 'react-youtube';
 
 type Code = {
   props: {
@@ -23,7 +24,7 @@ export const CodeBlock = ({ children }: Props) => {
   if (language === 'youtube') {
     return (
         <div className='youtube-wrap'>
-            <YouTube videoId={children[0] as string} />
+            <YouTube videoId={code as string} />
         </div>
     );
 }
