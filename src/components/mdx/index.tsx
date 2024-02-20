@@ -81,6 +81,7 @@ export const components: {
         },
         '> tbody > tr > td':{
           border: 1,
+          padding: "0em 4em",
         },
       }}
       {...props}
@@ -93,6 +94,7 @@ export const components: {
         display: 'block',
         margin: 'auto',
         maxWidth: '90%', // 画像が親要素の幅を超えないようにする
+        maxHeight: '300px',
         height: 'auto',   // アスペクト比を保ったまま高さを調整
         border: 1,
         borderColor: blue[800],
