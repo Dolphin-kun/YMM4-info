@@ -31,7 +31,7 @@ export const components: {
     <Box
       component="hr"
       sx={{
-        margin: '1em',
+        margin: '1em 0em',
       }}
       {...props}
     />
@@ -109,7 +109,7 @@ export const components: {
       component="img"
       sx={{
         display: 'block',
-        margin: 'auto',
+        margin: '1em auto',
         maxWidth: '90%', // 画像が親要素の幅を超えないようにする
         maxHeight: '300px',
         height: 'auto',   // アスペクト比を保ったまま高さを調整
