@@ -20,6 +20,14 @@ export const CodeBlock = ({ children }: Props) => {
 
   const code = String(children.props.children).replace(/\n$/, '');
 
+  if (language === 'youtube') {
+    return (
+        <div className='youtube-wrap'>
+            <YouTube videoId={children[0] as string} />
+        </div>
+    );
+}
+
   return (
     <Box sx={{ mt: 6, mb: 4 }}>
       {filename && (
