@@ -25,10 +25,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     return getServerSideSitemapLegacy(ctx, fields)
 }
 
-export default function Page() {
-    return (
-      <DefaultPage>
-        <Typography variant="h1">xml</Typography>
-      </DefaultPage>
-    );
-  }
+export default function Sitemap() {}
