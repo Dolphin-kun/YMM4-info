@@ -11,7 +11,7 @@ export const components: {
   p: (props: any) => (
     <Box
       component="p"
-      sx={{ mt: 6, mb: 0, lineHeight: '1.75rem', fontSize: '15px' }}
+      sx={{ mt: 2, mb: 0, lineHeight: '1.75rem', fontSize: '15px' }}
       {...props}
     />
   ),
