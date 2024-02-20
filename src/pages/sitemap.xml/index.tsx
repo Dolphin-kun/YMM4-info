@@ -1,5 +1,5 @@
 import { GetServerSideProps } from 'next'
-import { getServerSideSitemapLegacy, ISitemapField } from 'next-sitemap'
+import { getServerSideSitemapLegacy } from 'next-sitemap'
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const res = await fetch('https://ymm4-info.vercel.app/')
@@ -10,7 +10,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     pageData.forEach((page: any) => {
         console.log(page)
         fields.push({
-            loc: process.env.NEXT_PUBLIC_ROOT_URL,
+            loc: 'https://ymm4-info.vercel.app/',
         });
     });
     
