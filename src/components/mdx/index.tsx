@@ -23,6 +23,10 @@ export const components: {
       component="li"
       sx={{
         listStyle: 'inside',
+        '> ul':{
+          listStyle: 'circle',
+          margin: '0px'
+        },
       }}
       {...props}
     />
