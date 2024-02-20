@@ -10,12 +10,16 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     console.log(res);
     const fields: ISitemapField[] = [];
 
-    pageData.forEach((page: any) => {
-        console.log(page)
-        fields.push({
-            loc: 'https://ymm4-info.vercel.app/',
-        });
-    });
+    fields.push({
+        loc: "https://ymm4-info.vercel.app"
+    })
+
+   // pageData.forEach((page: any) => {
+       // console.log(page)
+       // fields.push({
+       //     loc: 'https://ymm4-info.vercel.app/',
+       // });
+  //  });
     
     ctx.res.setHeader('Cache-Control', 'max-age=86400'); // 24時間キャッシュ
     return getServerSideSitemapLegacy(ctx, fields)
