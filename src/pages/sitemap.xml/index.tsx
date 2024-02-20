@@ -2,16 +2,20 @@ import { GetServerSideProps } from 'next'
 import { getServerSideSitemapLegacy } from 'next-sitemap'
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
-    const response = await fetcher('https://ymm4-info.vercel.app/')
-    console.log(response);
-    const fields = response.contents.map((content) => {
-        return {
-            loc: `https://ymm4-info.vercel.app/${content.category.name}/${content.id}`,
-            lastmod: content.updatedAt
-        }
-    })
+    const res = await fetch('https://ymm4-info.vercel.app/')
+    const pageData = await res.json();
+    console.log(res);
+    const fields: ISitemapField[] = [];
 
-  return getServerSideSitemapLegacy(ctx, fields)
+    pageData.forEach((page) => {
+        console.log(page)
+        fields.push({
+            loc: process.env.NEXT_PUBLIC_ROOT_URL,
+        });
+    });
+    
+    ctx.res.setHeader('Cache-Control', 'max-age=86400'); // 24時間キャッシュ
+    return getServerSideSitemapLegacy(ctx, fields)
 }
 
 
