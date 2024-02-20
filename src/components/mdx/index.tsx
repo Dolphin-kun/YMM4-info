@@ -31,6 +31,15 @@ export const components: {
       {...props}
     />
   ),
+  ol: (props: any) => (
+    <Box
+      component="li"
+      sx={{
+        margin: '0px',
+      }}
+      {...props}
+    />
+  ),
   hr: (props: any) => (
     <Box
       component="hr"
