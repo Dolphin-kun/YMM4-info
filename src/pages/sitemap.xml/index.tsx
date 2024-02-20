@@ -7,7 +7,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
     console.log(res);
     const fields: ISitemapField[] = [];
 
-    pageData.forEach((page) => {
+    pageData.forEach((page: any) => {
         console.log(page)
         fields.push({
             loc: process.env.NEXT_PUBLIC_ROOT_URL,
