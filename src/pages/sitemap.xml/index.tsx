@@ -7,7 +7,7 @@ import { Typography } from '@mui/material';
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const res = await fetch('https://ymm4-info.vercel.app/')
     const pageData = await res.json();
-    console.log(res);
+    console.log(pageData);
     const fields: ISitemapField[] = [];
 
     fields.push({
