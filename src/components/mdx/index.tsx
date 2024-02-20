@@ -102,7 +102,7 @@ export const components: {
         },
         '> tbody > tr > td':{
           border: 1,
-          padding: "0em 4em",
+          padding: "0em 3em",
         },
       }}
       {...props}
