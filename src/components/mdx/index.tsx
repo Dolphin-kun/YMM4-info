@@ -31,7 +31,7 @@ export const components: {
     <Box
       component="hr"
       sx={{
-        margin: '1em 0em',
+        margin: '2em 0em',
       }}
       {...props}
     />
