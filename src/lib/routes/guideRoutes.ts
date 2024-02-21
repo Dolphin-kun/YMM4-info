@@ -31,7 +31,7 @@ export const guideRoutes: Routes = [
       },
       {
         label: 'a',
-        path: '',
+        path: '/',
         subPages: [
           {
             label: 'home',
@@ -298,5 +298,5 @@ export const guideRoutes: Routes = [
 
 
 export const allGuideRoutes: Routes = guideRoutes.flatMap((route) =>
-  route.pages ? route.pages.flatMap((page) => page.subPages ? [page, ...page.subPages] : [page]) : [route],
+  route.pages ? route.pages : [{ label: route.label, path: route.path }],
 );
