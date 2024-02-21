@@ -1,8 +1,5 @@
 import { GetServerSideProps } from 'next'
 import { getServerSideSitemapLegacy, ISitemapField } from 'next-sitemap'
-import { DefaultPage } from '@/components/default';
-import { Typography } from '@mui/material';
-
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
     const res = await fetch('https://ymm4-info.vercel.app/')
