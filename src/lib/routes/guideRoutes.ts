@@ -31,6 +31,7 @@ export const guideRoutes: Routes = [
       },
       {
         label: 'a',
+        path: '',
         subPages: [
           {
             label: 'home',
