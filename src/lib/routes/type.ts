@@ -9,10 +9,4 @@ export type Route = {
 type Page = {
   label: string;
   path: string;
-  subPages?: SubPage[]
-};
-
-type SubPage = {
-  label: string;
-  path: string;
 };
