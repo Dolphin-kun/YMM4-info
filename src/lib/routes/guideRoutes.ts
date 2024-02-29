@@ -29,16 +29,17 @@ export const guideRoutes: Routes = [
         label: 'エフェクトアイテムの使い方',
         path: '/guide/' + encodeURIComponent("基本機能") + '/effect-item',
       },
-      {
-        label: 'a',
-        path: '/',
-        subPages: [
-          {
-            label: 'home',
-            path: '/'
-          }
-        ]
-      }
+      
+      //{
+      //  label: 'a',
+      //  path: '/',
+      //  subPages: [
+      //    {
+      //      label: 'home',
+      //      path: '/'
+      //    }
+      //  ]
+      //}
     ],
   },
   {
@@ -270,28 +271,73 @@ export const guideRoutes: Routes = [
     ],
   },
     {
-    label: '合成',
+    label: '装飾',
     pages: [
       { 
-        label: 'クリッピング', 
-        path: '/guide/Effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("クリッピング"),
+        label: '影', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("影"),
       },
       { 
-        label: 'クロマキー', 
-        path: '/guide/Effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("クロマキー"),
+        label: '影（内側）', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("クロマキー"),
       },
       { 
-        label: '減色', 
-        path: '/guide/Effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("減色"),
+        label: '縁取り', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("減色"),
       },
       { 
-        label: '斜めクリッピング', 
-        path: '/guide/Effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("斜めクリッピング"),
+        label: '縁取り（内側）', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("斜めクリッピング"),
       },
       { 
-        label: '図形切り抜き', 
-        path: '/guide/Effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
       },
+      { 
+        label: '伸びる影', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '前景塗りつぶし', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '背景画像', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '背景塗りつぶし', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+      { 
+        label: '画像の貼り付け', 
+        path: '/guide/Effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+      },
+
     ],
   },
 ];
