@@ -30,16 +30,16 @@ export const guideRoutes: Routes = [
         path: '/guide/' + encodeURIComponent("基本機能") + '/effect-item',
       },
       
-      //{
-      //  label: 'a',
-      //  path: '/',
-      //  subPages: [
-      //    {
-      //      label: 'home',
-      //      path: '/'
-      //    }
-      //  ]
-      //}
+      {
+        label: 'a',
+        path: '/',
+        subPages: [
+          {
+            label: 'home',
+            path: '/'
+          }
+        ]
+      }
     ],
   },
   {
