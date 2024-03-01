@@ -76,6 +76,7 @@ export const HomePage = ({
           </Typography>
           <LinkButton href="/guide/YMM4/overview">Get Started</LinkButton>
         </Stack>
+        {spacer}
         <Stack alignItems="flex-start" spacing={8}>
           <Typography variant="h2">News</Typography>
           <Typography css={paragraphStyles}>
