@@ -2,11 +2,11 @@ import { Routes } from './type';
 
 export const newsRoutes: Routes = [
   {
-    label: 'アップデート情報',
-    path: '/news/update/4.26.0.0',
+    label: '概要',
+    path: '/news/overview',
   },
   {
-    label: 'ガイド',
-    path: '/guide/overview',
+    label: 'アップデート情報',
+    path: '/guide/update/4.26.0.0',
   }
 ];
