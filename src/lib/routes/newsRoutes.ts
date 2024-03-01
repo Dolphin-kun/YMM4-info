@@ -10,3 +10,7 @@ export const newsRoutes: Routes = [
     path: '/guide/update/4.26.0.0',
   }
 ];
+
+export const allNewsRoutes: Routes = newsRoutes.flatMap((route) =>
+  route.pages ? route.pages : [{ label: route.label, path: route.path }],
+);
