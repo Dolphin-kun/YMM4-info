@@ -7,7 +7,12 @@ export const newsRoutes: Routes = [
   },
   {
     label: 'アップデート情報',
-    path: '/guide/update/4.26.0.0',
+    pages: [
+      {
+        label:'v4.26.0.0',
+        path:'/news/update/v4.26.0.0',
+      }
+    ]
   }
 ];
 
