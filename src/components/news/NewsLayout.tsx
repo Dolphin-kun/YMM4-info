@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 import { Container } from '../Container';
 import { Footer } from '../Footer';
 import { ScrollArea } from '../ScrollArea';
-import { newsHeader } from './newsHeader';
+import { NewsHeader } from './NewsHeader';
 import { MobileMenu } from './MobileMenu';
 import { RoutesNav } from './RoutesNav';
 
@@ -39,7 +39,7 @@ export const newsLayout = ({ children }: Props) => {
           backgroundColor: 'white',
         }}
       >
-        <newsHeader
+        <NewsHeader
           onMobileMenuButtonClick={() => setIsMobileMenuOpen((state) => !state)}
         />
         <Box
