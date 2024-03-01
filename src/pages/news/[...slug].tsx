@@ -1,4 +1,4 @@
-import { GuidePage } from '@/components/guide';
+import { NewsPage } from '@/components/news';
 import { components } from '@/components/mdx';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { MdxSource } from '@/types/mdx';
@@ -12,9 +12,9 @@ type Props = {
 
 export default function Page({ mdxSource }: Props) {
   return (
-    <GuidePage>
+    <NewsPage>
       <MDXRemote {...mdxSource} components={components} />
-    </GuidePage>
+    </NewsPage>
   );
 }
 
