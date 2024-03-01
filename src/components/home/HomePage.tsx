@@ -82,7 +82,7 @@ export const HomePage = ({
           <Typography css={paragraphStyles}>
             アップデートや、バグ・エラーなどの情報をまとめています。
           </Typography>
-          <LinkButton href="/news/update/4.26.0.0">News</LinkButton>
+          <LinkButton href="/news/overview">News</LinkButton>
         </Stack>
       </Box>
     </>
