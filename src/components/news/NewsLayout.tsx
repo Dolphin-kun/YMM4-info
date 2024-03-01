@@ -15,7 +15,7 @@ import { RoutesNav } from './RoutesNav';
 
 type Props = WithChildren;
 
-export const newsLayout = ({ children }: Props) => {
+export const NewsLayout = ({ children }: Props) => {
   const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
