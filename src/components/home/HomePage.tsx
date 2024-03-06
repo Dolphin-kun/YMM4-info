@@ -46,7 +46,7 @@ export const HomePage = ({
           YMM4に関係する機能や編集のコツなど
           <br />
           </Typography>
-          <Stack direction="row" spacing={4}>
+          <Stack spacing={4}>
             {frontmatters.map((frontmatter) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
