@@ -36,7 +36,7 @@ export const Footer = () => {
               <Link href="#" aria-label="link to GitHub Account">
                 <GitHub sx={{ fontSize: 32 }} />
               </Link>
-              <Link href="#" aria-label="link to X(Twitter) Account">
+              <Link href="https://x.com/YMM4_info" aria-label="link to X(Twitter) Account">
                 <X sx={{ fontSize: 32 }} />
               </Link>
               <Link href="#" aria-label="link to Google Account">
