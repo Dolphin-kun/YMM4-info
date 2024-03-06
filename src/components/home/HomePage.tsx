@@ -90,7 +90,7 @@ export const HomePage = ({
           <Typography css={paragraphStyles}>
            YMM4にあるエフェクト一覧です。
           </Typography>
-          <LinkButton href="/Effects/overview">News</LinkButton>
+          <LinkButton href="/Effects/overview">Effects</LinkButton>
         </Stack>
       </Box>
     </>
