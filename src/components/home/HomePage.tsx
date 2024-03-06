@@ -84,6 +84,14 @@ export const HomePage = ({
           </Typography>
           <LinkButton href="/news/overview">News</LinkButton>
         </Stack>
+        {spacer}
+        <Stack alignItems="flex-start" spacing={8}>
+          <Typography variant="h2">Effects</Typography>
+          <Typography css={paragraphStyles}>
+           YMM4にあるエフェクト一覧です。
+          </Typography>
+          <LinkButton href="/Effects/overview">News</LinkButton>
+        </Stack>
       </Box>
     </>
   );
