@@ -31,11 +31,6 @@ export const guideRoutes: Routes = [
       },
     ],
   },
-  {
-    label: '映像エフェクト',
-    path: '/guide/Effects/overview',
-  },
-  
 ];
 
 
