@@ -1,5 +1,6 @@
 import { DefaultLayout } from '@/components/default';
 import { GuideLayout } from '@/components/guide';
+import { EffectsLayout } from '@/components/Effects';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
@@ -16,6 +17,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
 
   const isHome = router.pathname === '/';
   const isGuide = router.pathname.includes('/guide');
+  const isEffects = router.pathname.includes('/Effects');
 
   return (
     <>
@@ -32,6 +34,10 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
           <GuideLayout>
             <Component {...pageProps} />
           </GuideLayout>
+        ) : isEffects ? (
+          <EffectsLayout>
+            <Component {...pageProps} />
+          </EffectsLayout>
         ) : (
           <DefaultLayout>
             <Component {...pageProps} />
