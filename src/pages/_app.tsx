@@ -38,12 +38,16 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     };
     
 
+    const handleRouteChange = (url) => {
+      handleStart();
+      handleComplete();
+    };
+
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
 
-    handleStart();
-    handleComplete();
+    handleRouteChange(router.pathname);
 
     return () => {
       router.events.off('routeChangeStart', handleStart);
