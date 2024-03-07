@@ -31,18 +31,10 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     const handleStart = () => {
       NProgress.start();
       setLoading(true);
-      const videoElement = document.getElementById('loading-video') as HTMLVideoElement;
-      if (videoElement) {
-        videoElement.play();
-      }
     };
     const handleComplete = () => {
       NProgress.done();
       setLoading(false);
-      const videoElement = document.getElementById('loading-video') as HTMLVideoElement;
-      if (videoElement) {
-        videoElement.pause();
-      }
     };
     
 
@@ -70,9 +62,6 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       <div style={styles.loading}>
         <div>
         <video id="loading-video" src="/assets/loading.mp4" autoPlay muted loop style={styles.video} />
-          <h1 className="next-loading-h1" style={styles.h1}>
-            Loading...
-          </h1>
         </div>
       </div>
       )}
