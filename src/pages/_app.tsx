@@ -7,7 +7,7 @@ import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress'; // nprogressライブラリを利用
 import 'nprogress/nprogress.css'; // nprogressのスタイル
