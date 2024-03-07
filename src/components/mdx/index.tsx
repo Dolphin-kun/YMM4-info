@@ -126,7 +126,7 @@ export const components: {
         maxWidth: '90%', // 画像が親要素の幅を超えないようにする
         maxHeight: '300px',
         height: 'auto',   // アスペクト比を保ったまま高さを調整
-        boxShadow: 2,
+        boxShadow: 3,
       }}
       {...props}
     />
