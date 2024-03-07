@@ -118,8 +118,6 @@ const styles = {
     padding: "0 23px 0 0",
     fontSize: 24,
     fontWeight: 500,
-    verticalAlign: "top",
-    lineHeight: "49px",
   },
 } as const;
 
