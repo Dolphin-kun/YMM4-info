@@ -9,13 +9,14 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import NProgress from 'nprogress'; // nprogressライブラリを利用
+import 'nprogress/nprogress.css'; // nprogressのスタイル
 
 type Props = AppProps & {
   emotionCache?: EmotionCache;
 };
 
 function MyApp({ Component, emotionCache, pageProps }: Props) {
-  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const isHome = router.pathname === '/';
@@ -24,8 +25,8 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const isNews = router.pathname.includes('/news');
 
   useEffect(() => {
-    const handleStart = () => { setLoading(true); };
-    const handleComplete = () => { setLoading(false); };
+    const handleStart = () => { NProgress.start(); };
+    const handleComplete = () => { NProgress.done(); };
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
@@ -40,9 +41,6 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
 
   return (
     <>
-      {loading && (
-        <div>Loading...</div>
-      )}
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="google-site-verification" content="dGAOo4Shts_OYHNeo1GldFi0Qa4TlrdqD5XcGIbB03Q" />
