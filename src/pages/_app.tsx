@@ -7,10 +7,10 @@ import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import NProgress from 'nprogress'; // nprogressライブラリを利用
-import 'nprogress/nprogress.css'; // nprogressのスタイル
+import NProgress from 'nprogress'; 
+import 'nprogress/nprogress.css'; 
 
 NProgress.configure({ showSpinner: false }); // スピナーを隠す設定
 
@@ -19,6 +19,7 @@ type Props = AppProps & {
 };
 
 function MyApp({ Component, emotionCache, pageProps }: Props) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const isHome = router.pathname === '/';
@@ -27,8 +28,15 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const isNews = router.pathname.includes('/news');
 
   useEffect(() => {
-    const handleStart = () => { NProgress.start(); };
-    const handleComplete = () => { NProgress.done(); };
+    const handleStart = () => {
+      NProgress.start();
+      setLoading(true);
+    };
+    const handleComplete = () => {
+      NProgress.done();
+      setLoading(false);
+    };
+    
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
@@ -46,6 +54,20 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
 
   return (
     <>
+      {loading && (
+      <div style={styles.loading}>
+        <div>
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `body{color:#000;background:#fff;margin:0}.next-loading-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-loading-h1{border-right:1px solid rgba(255,255,255,.3)}}`,
+            }}
+          />
+          <h1 className="next-loading-h1" style={styles.h1}>
+            Loading...
+          </h1>
+        </div>
+      </div>
+      )}
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="google-site-verification" content="dGAOo4Shts_OYHNeo1GldFi0Qa4TlrdqD5XcGIbB03Q" />
@@ -76,5 +98,30 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     </>
   );
 }
+
+
+const styles = {
+  loading: {
+    fontFamily:
+      'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+    height: "100vh",
+    textAlign: "center",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  h1: {
+    display: "inline-block",
+    margin: "0 20px 0 0",
+    padding: "0 23px 0 0",
+    fontSize: 24,
+    fontWeight: 500,
+    verticalAlign: "top",
+    lineHeight: "49px",
+  },
+} as const;
+
 
 export default MyApp;
