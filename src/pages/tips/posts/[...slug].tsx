@@ -43,14 +43,24 @@ export default function Page({ mdxSource }: Props) {
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
       </Box>
-      <Stack spacing={6}>
-        <Typography variant="h1">Tags</Typography>
-        <Stack direction="row" flexWrap="wrap" spacing={2}>
-          {tags.map((tag) => (
-            <PostTag key={tag} href={`/tips/tags/${tag}`} label={tag} />
-          ))}
+      <Stack spacing={4}>
+          {frontmatters.map((frontmatter) => {
+            const { title, description, author, image, date, path } =
+              frontmatter;
+
+            return (
+              <PostCard
+                key={description}
+                title={title}
+                description={description}
+                author={author}
+                date={date}
+                image={image}
+                href={path}
+              />
+            );
+          })}
         </Stack>
-      </Stack>
     </DefaultPage>
   );
 }
