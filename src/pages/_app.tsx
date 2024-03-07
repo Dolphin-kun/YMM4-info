@@ -38,7 +38,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     };
     
 
-    const handleRouteChange = (url) => {
+    const handleRouteChange = (url: string) => {
       handleStart();
       handleComplete();
     };
@@ -61,11 +61,6 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       {loading && (
       <div style={styles.loading}>
         <div>
-          <style
-            dangerouslySetInnerHTML={{
-              __html: `body{color:#000;background:#fff;margin:0}.next-loading-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-loading-h1{border-right:1px solid rgba(255,255,255,.3)}}`,
-            }}
-          />
           <h1 className="next-loading-h1" style={styles.h1}>
             Loading...
           </h1>
