@@ -31,7 +31,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     const handleStart = () => {
       NProgress.start();
       setLoading(true);
-      const videoElement = document.getElementById('loading-video');
+      const videoElement = document.getElementById('loading-video') as HTMLVideoElement;
       if (videoElement) {
         videoElement.play();
       }
@@ -39,7 +39,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     const handleComplete = () => {
       NProgress.done();
       setLoading(false);
-      const videoElement = document.getElementById('loading-video');
+      const videoElement = document.getElementById('loading-video') as HTMLVideoElement;
       if (videoElement) {
         videoElement.pause();
       }
