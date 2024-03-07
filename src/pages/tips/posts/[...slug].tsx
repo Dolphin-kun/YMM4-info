@@ -4,7 +4,7 @@ import { components } from '@/components/mdx';
 import { PostCard } from '@/components/PostCard';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
-import { getMdxBySlug } from '@/lib/mdx';
+import { getMdxBySlug, getAllFrontmatters } from '@/lib/mdx';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
