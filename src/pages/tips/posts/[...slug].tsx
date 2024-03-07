@@ -1,28 +1,24 @@
 import { DefaultPage } from '@/components/default';
 import { Image } from '@/components/Image';
 import { components } from '@/components/mdx';
-import { PostCard } from '@/components/PostCard';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
-import { getMdxBySlug, getAllPaths, getAllFrontmatters } from '@/lib/mdx';
-import { FrontmatterWithPath } from '@/types/fromtmatter';
+import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { formatDate } from '@/utils/date';
-import { distinct } from '@/utils/distinct';
 import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { Seo } from '@/components/Seo';
+import Page from '../tags/[slug]';
 
 type Props = {
   mdxSource: MdxSource;
-  frontmatters: FrontmatterWithPath[];
-  tag: string;
 };
 
-export default function Page({ mdxSource,frontmatters,tag }: Props) {
+export default function Page({ mdxSource }: Props) {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const { scope } = mdxSource;
@@ -48,24 +44,9 @@ export default function Page({ mdxSource,frontmatters,tag }: Props) {
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
       </Box>
-      <Stack spacing={4}>
-          {frontmatters.map((frontmatter) => {
-            const { title, description, author, image, date, path } =
-              frontmatter;
-
-            return (
-              <PostCard
-                key={description}
-                title={title}
-                description={description}
-                author={author}
-                date={date}
-                image={image}
-                href={path}
-              />
-            );
-          })}
-        </Stack>
+      <Stack>
+        
+      </Stack>
     </DefaultPage>
   );
 }
@@ -77,22 +58,8 @@ type Params = NextParsedUrlQuery & {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const frontmatters = getAllFrontmatters(BASE_PATH);
-  const tags = distinct(
-    frontmatters.flatMap((frontmatter) => frontmatter.tags),
-  );
-
-  const additionalPaths = getAllPaths(BASE_PATH);
-
   return {
-    paths: [
-      ...tags.map((tag) => ({
-        params: { slug: tag },
-      })),
-      ...additionalPaths.map((path) => ({
-        params: { slug: path }, // 仮に `slug` を使用していますが、実際にはパラメータ名を指定してください
-      })),
-    ],
+    paths: getAllPaths(BASE_PATH),
     fallback: false,
   };
 };
@@ -102,15 +69,10 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 }) => {
   const slug = params!.slug;
   const mdxSource = await getMdxBySlug(BASE_PATH, slug);
-  const frontmatters = getAllFrontmatters(BASE_PATH).filter((frontmatter) =>
-  frontmatter.tags.includes(slug),
-);
 
   return {
     props: {
       mdxSource,
-      frontmatters,
-      tag: slug,
     },
   };
 };
