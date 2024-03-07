@@ -81,10 +81,18 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const tags = distinct(
     frontmatters.flatMap((frontmatter) => frontmatter.tags),
   );
+
+  const additionalPaths = getAllPaths(BASE_PATH);
+  
   return {
-    paths: tags.map((tag) => ({
-      params: { slug: tag },
-    })),
+    paths: [
+      ...tags.map((tag) => ({
+        params: { slug: tag },
+      })),
+      ...additionalPaths.map((path) => ({
+        params: { slug: path }, // 仮に `slug` を使用していますが、実際にはパラメータ名を指定してください
+      })),
+    ],
     fallback: false,
   };
 };
