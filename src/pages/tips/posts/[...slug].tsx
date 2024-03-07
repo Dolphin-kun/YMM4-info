@@ -4,7 +4,7 @@ import { components } from '@/components/mdx';
 import { PostCard } from '@/components/PostCard';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
-import { getMdxBySlug, getAllFrontmatters } from '@/lib/mdx';
+import { getMdxBySlug, getAllPaths, getAllFrontmatters } from '@/lib/mdx';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
@@ -83,7 +83,7 @@ export const getStaticPaths: GetStaticPaths<Params> = async () => {
   );
 
   const additionalPaths = getAllPaths(BASE_PATH);
-  
+
   return {
     paths: [
       ...tags.map((tag) => ({
