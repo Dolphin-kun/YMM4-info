@@ -7,6 +7,7 @@ import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 type Props = AppProps & {
@@ -14,6 +15,7 @@ type Props = AppProps & {
 };
 
 function MyApp({ Component, emotionCache, pageProps }: Props) {
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const isHome = router.pathname === '/';
@@ -21,8 +23,26 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const isEffects = router.pathname.includes('/Effects');
   const isNews = router.pathname.includes('/news');
 
+  useEffect(() => {
+    const handleStart = () => { setLoading(true); };
+    const handleComplete = () => { setLoading(false); };
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleComplete);
+    router.events.on('routeChangeError', handleComplete);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleComplete);
+      router.events.off('routeChangeError', handleComplete);
+    };
+  }, [router]);
+
   return (
     <>
+      {loading && (
+        <div>Loading...</div>
+      )}
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <meta name="google-site-verification" content="dGAOo4Shts_OYHNeo1GldFi0Qa4TlrdqD5XcGIbB03Q" />
