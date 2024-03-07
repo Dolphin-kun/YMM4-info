@@ -12,6 +12,8 @@ import { useRouter } from 'next/router';
 import NProgress from 'nprogress'; // nprogressライブラリを利用
 import 'nprogress/nprogress.css'; // nprogressのスタイル
 
+NProgress.configure({ showSpinner: false }); // スピナーを隠す設定
+
 type Props = AppProps & {
   emotionCache?: EmotionCache;
 };
@@ -31,6 +33,9 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
+
+    handleStart();
+    handleComplete();
 
     return () => {
       router.events.off('routeChangeStart', handleStart);
