@@ -5,6 +5,7 @@ import { PostCard } from '@/components/PostCard';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
+import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { formatDate } from '@/utils/date';
@@ -16,9 +17,11 @@ import { Seo } from '@/components/Seo';
 
 type Props = {
   mdxSource: MdxSource;
+  frontmatters: FrontmatterWithPath[];
+  tag: string;
 };
 
-export default function Page({ mdxSource }: Props) {
+export default function Page({ mdxSource,frontmatters,tag }: Props) {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const { scope } = mdxSource;
