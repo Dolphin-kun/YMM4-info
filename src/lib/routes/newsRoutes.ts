@@ -23,6 +23,15 @@ export const newsRoutes: Routes = [
       },
     ],
   },
+  {
+    label: '要望',
+    pages: [
+      {
+        label:'基本機能',
+        path:'/news/request/'+ encodeURIComponent("基本機能"),
+      },
+    ],
+  },
 ];
 
 export const allNewsRoutes: Routes = newsRoutes.flatMap((route) =>
