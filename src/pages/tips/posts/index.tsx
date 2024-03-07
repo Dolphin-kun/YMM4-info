@@ -4,7 +4,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       permanent: false, 
-      destination: '/tips/page/1/', 
+      destination: 'https://ymm4-info.vercel.app/tips/page/1/', 
     },
   }
 }
