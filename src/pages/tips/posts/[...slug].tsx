@@ -12,7 +12,6 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { Seo } from '@/components/Seo';
-import Page from '../tags/[slug]';
 
 type Props = {
   mdxSource: MdxSource;
