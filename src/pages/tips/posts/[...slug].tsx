@@ -9,6 +9,7 @@ import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { formatDate } from '@/utils/date';
+import { distinct } from '@/utils/distinct';
 import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
