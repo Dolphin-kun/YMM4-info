@@ -1,4 +1,4 @@
-import { EffectsPage } from '@/components/Effects';
+import { EffectsPage } from '@/components/effects';
 import { components } from '@/components/mdx';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { MdxSource } from '@/types/mdx';
@@ -18,7 +18,7 @@ export default function Page({ mdxSource }: Props) {
   );
 }
 
-const BASE_PATH = 'Effects';
+const BASE_PATH = 'effects';
 
 type Params = NextParsedUrlQuery & {
   slug: string[];

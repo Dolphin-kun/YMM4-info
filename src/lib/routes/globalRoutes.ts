@@ -15,6 +15,6 @@ export const globalRoutes: Routes = [
   },
   {
     label: 'Effects',
-    path: '/Effects/overview',
+    path: '/effects/overview',
   },
 ];

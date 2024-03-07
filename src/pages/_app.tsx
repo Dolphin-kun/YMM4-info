@@ -1,6 +1,6 @@
 import { DefaultLayout } from '@/components/default';
 import { GuideLayout } from '@/components/guide';
-import { EffectsLayout } from '@/components/Effects';
+import { EffectsLayout } from '@/components/effects';
 import { NewsLayout } from '@/components/news';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
@@ -24,7 +24,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
 
   const isHome = router.pathname === '/';
   const isGuide = router.pathname.includes('/guide');
-  const isEffects = router.pathname.includes('/Effects');
+  const isEffects = router.pathname.includes('/effects');
   const isNews = router.pathname.includes('/news');
 
   useEffect(() => {
