@@ -43,6 +43,14 @@ export default function Page({ mdxSource }: Props) {
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
       </Box>
+      <Stack spacing={6}>
+        <Typography variant="h1">Tags</Typography>
+        <Stack direction="row" flexWrap="wrap" spacing={2}>
+          {tags.map((tag) => (
+            <PostTag key={tag} href={`/tips/tags/${tag}`} label={tag} />
+          ))}
+        </Stack>
+      </Stack>
     </DefaultPage>
   );
 }
