@@ -76,8 +76,14 @@ type Params = NextParsedUrlQuery & {
 };
 
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
+  const frontmatters = getAllFrontmatters(BASE_PATH);
+  const tags = distinct(
+    frontmatters.flatMap((frontmatter) => frontmatter.tags),
+  );
   return {
-    paths: getAllPaths(BASE_PATH),
+    paths: tags.map((tag) => ({
+      params: { slug: tag },
+    })),
     fallback: false,
   };
 };
@@ -87,10 +93,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 }) => {
   const slug = params!.slug;
   const mdxSource = await getMdxBySlug(BASE_PATH, slug);
+  const frontmatters = getAllFrontmatters(BASE_PATH).filter((frontmatter) =>
+  frontmatter.tags.includes(slug),
+);
 
   return {
     props: {
       mdxSource,
+      frontmatters,
+      tag: slug,
     },
   };
 };
