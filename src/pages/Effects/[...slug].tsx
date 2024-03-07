@@ -1,4 +1,4 @@
-import { EffectsPage } from '@/components/effects';
+import { EffectsPage } from '@/components/Effects';
 import { components } from '@/components/mdx';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { MdxSource } from '@/types/mdx';

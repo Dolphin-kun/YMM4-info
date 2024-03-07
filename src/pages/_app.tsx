@@ -1,6 +1,6 @@
 import { DefaultLayout } from '@/components/default';
 import { GuideLayout } from '@/components/guide';
-import { EffectsLayout } from '@/components/effects';
+import { EffectsLayout } from '@/components/Effects';
 import { NewsLayout } from '@/components/news';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
