@@ -36,18 +36,13 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       NProgress.done();
       setLoading(false);
     };
-    
-
-    const handleRouteChange = (url: string) => {
-      handleStart();
-      handleComplete();
-    };
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
 
-    handleRouteChange(router.pathname);
+    handleStart();
+    handleComplete();
 
     return () => {
       router.events.off('routeChangeStart', handleStart);
@@ -61,7 +56,9 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       {loading && (
       <div style={styles.loading}>
         <div>
-        <video id="loading-video" src="/assets/loading.mp4" autoPlay muted loop style={styles.video} />
+          <h1 className="next-loading-h1" style={styles.h1}>
+            Loading...
+          </h1>
         </div>
       </div>
       )}
@@ -115,10 +112,6 @@ const styles = {
     padding: "0 23px 0 0",
     fontSize: 24,
     fontWeight: 500,
-  },
-  video:{
-    width: '100%',
-    height: '100%'
   },
 } as const;
 
