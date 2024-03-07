@@ -6,7 +6,15 @@ export const globalRoutes: Routes = [
     path: '/tips/page/1',
   },
   {
-    label: 'ガイド',
+    label: 'Guide',
     path: '/guide/overview',
-  }
+  },
+  {
+    label: 'News',
+    path: '/news/overview',
+  },
+  {
+    label: 'Effects',
+    path: '/Effects/overview',
+  },
 ];
