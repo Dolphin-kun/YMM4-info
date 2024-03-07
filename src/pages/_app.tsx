@@ -103,15 +103,21 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
   },
 
   h1: {
-    display: "inline-block",
-    margin: "0 20px 0 0",
-    padding: "0 23px 0 0",
     fontSize: 24,
     fontWeight: 500,
+    opacity: 0,
+    animation: "fadeIn 0.5s forwards",
+  },
+  "@keyframes fadeIn": {
+    "0%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 1,
+    },
   },
 } as const;
 
