@@ -111,7 +111,7 @@ export const components: {
         },
         '> tbody > tr > td':{
           border: 1,
-          padding: "0em 2em",
+          padding: "0px 10px",
         },
       }}
       {...props}
