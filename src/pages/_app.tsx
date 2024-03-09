@@ -2,7 +2,7 @@ import { DefaultLayout } from '@/components/default';
 import { GuideLayout } from '@/components/guide';
 import { EffectsLayout } from '@/components/Effects';
 import { NewsLayout } from '@/components/news';
-import { FaqsLayout } from '@/components/faq';
+import { FaqLayout } from '@/components/faq';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
@@ -86,9 +86,9 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
             <Component {...pageProps} />
           </NewsLayout>
         ) : isFaq ? (
-          <FaqsLayout>
+          <FaqLayout>
             <Component {...pageProps} />
-          </FaqsLayout>
+          </FaqLayout>
         ) : (
           <DefaultLayout>
             <Component {...pageProps} />
