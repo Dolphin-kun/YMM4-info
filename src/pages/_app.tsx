@@ -30,21 +30,22 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const isFaq = router.pathname.includes('/faq');
 
   useEffect(() => {
-    const handleStart = () => {
-      NProgress.start();
-      setLoading(true);
+    const handleStart = (url: string) => {
+      if (!url.startsWith('/_next/')) {
+        NProgress.start();
+        setLoading(true);
+      }
     };
-    const handleComplete = () => {
-      NProgress.done();
-      setLoading(false);
+    const handleComplete = (url: string) => {
+      if (!url.startsWith('/_next/')) {
+        NProgress.done();
+        setLoading(false);
+      }
     };
 
     router.events.on('routeChangeStart', handleStart);
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
-
-    handleStart();
-    handleComplete();
 
     return () => {
       router.events.off('routeChangeStart', handleStart);
