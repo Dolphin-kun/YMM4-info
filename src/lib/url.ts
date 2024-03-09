@@ -12,4 +12,4 @@ export const resolveUrl = (...paths: string[]) => {
 };
 
 export const getImageUrl = (image: string | undefined) =>
-  resolveUrl('assets', image ?? '/assets/image.png');
+  resolveUrl('assets', image ?? '/assets/サムネイル.png');
