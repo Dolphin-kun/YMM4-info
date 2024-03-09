@@ -42,7 +42,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
 
   return (
     <DefaultPage>
-      <Seo title={'Tips'} description={'Tipsの一覧ページです'} image={'/assets/image.png'} />
+      <Seo title={'Tips'} description={'Tipsの一覧ページです'} image={process.env.Thumbnail_Img} />
       <Stack spacing={6}>
         <Typography variant="h1">Tips</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>

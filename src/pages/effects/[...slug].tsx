@@ -16,7 +16,7 @@ export default function Page({ mdxSource }: Props) {
   const { title, description } = scope;
   return (
     <EffectsPage>
-      <Seo title={title} description={description} image={'/assets/image.png'} />
+      <Seo title={title} description={description} image={process.env.Thumbnail_Img} />
       <MDXRemote {...mdxSource} components={components} />
     </EffectsPage>
   );
