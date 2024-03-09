@@ -116,14 +116,14 @@ const styles = {
     height: "100vh",
     textAlign: "center",
     display: "flex",
-    justifyContent: center,
-    alignItems: center,
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   h1: {
     fontSize: 24,
     fontWeight: 500,
-    textAlign: center,
+    textAlign: "center",
   },
 } as const;
 
