@@ -23,7 +23,7 @@ export const components: {
       component="li"
       sx={{
         listStyle: 'inside',
-        '> li':{
+        '>ul >li':{
           listStyle: 'circle',
           marginLeft: '2rem'
         },
