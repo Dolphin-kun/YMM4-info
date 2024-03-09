@@ -53,6 +53,40 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     };
   }, [router]);
 
+  useEffect(() => {
+    const handleImagesLoad = () => {
+      const images = document.getElementsByTagName('img');
+      const totalImages = images.length;
+      let loadedImages = 0;
+
+      const onImageLoad = () => {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+          setLoading(false);
+        }
+      };
+
+      for (let i = 0; i < totalImages; i++) {
+        if (images[i].complete) {
+          onImageLoad();
+        } else {
+          images[i].addEventListener('load', onImageLoad);
+        }
+      }
+    };
+
+    handleImagesLoad();
+
+    return () => {
+      const images = document.getElementsByTagName('img');
+      const totalImages = images.length;
+
+      for (let i = 0; i < totalImages; i++) {
+        images[i].removeEventListener('load', handleImagesLoad);
+      }
+    };
+  }, []);
+
   return (
     <>
       {loading && (
