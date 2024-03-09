@@ -16,7 +16,7 @@ type Props = {
 export default function Page({ frontmatters, tag }: Props) {
   return (
     <DefaultPage>
-      <Seo title={'Tags'} description={'タグの一覧ページです'} image={process.env.Thumbnail_Img} />
+      <Seo title={'Tags'} description={'タグの一覧ページです'} image={'サムネイル.png'} />
       <Stack spacing={6}>
         <Typography variant="h1">Tag : {tag}</Typography>
         <Stack spacing={4}>
