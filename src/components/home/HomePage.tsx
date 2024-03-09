@@ -96,7 +96,8 @@ export const HomePage = ({
         <Stack alignItems="flex-start" spacing={8}>
           <Typography variant="h2">よくある質問</Typography>
           <Typography css={paragraphStyles}>
-           FAQです。饅頭遣いのおもちゃ箱にある質問以外を詳しく書いています。
+           FAQです。
+           饅頭遣いのおもちゃ箱にある質問以外を詳しく書いています。
           </Typography>
           <LinkButton href="/faq/overview">FAQ</LinkButton>
         </Stack>
