@@ -20,7 +20,7 @@ type Props = AppProps & {
 };
 
 function MyApp({ Component, emotionCache, pageProps }: Props) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
 
   const isHome = router.pathname === '/';
@@ -32,7 +32,6 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   useEffect(() => {
     const handleStart = () => {
       NProgress.start();
-      setLoading(true);
     };
     const handleComplete = () => {
       NProgress.done();
@@ -53,9 +52,11 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     };
   }, [router]);
 
+  const allComponentsLoaded = !loading && isHome && isGuide && isEffects && isNews && isFaq;
+
   return (
     <>
-      {loading && (
+      {!allComponentsLoaded && (
       <div style={styles.loading}>
         <div>
           <h1 className="next-loading-h1" style={styles.h1}>
