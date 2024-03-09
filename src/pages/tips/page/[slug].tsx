@@ -9,6 +9,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { ChangeEvent, useEffect } from 'react';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   frontmatters: FrontmatterWithPath[];
@@ -41,6 +42,7 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
 
   return (
     <DefaultPage>
+      <Seo title={'Tips'} description={'Tipsの一覧ページです'} image={'/assets/image.png'} />
       <Stack spacing={6}>
         <Typography variant="h1">Tips</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>

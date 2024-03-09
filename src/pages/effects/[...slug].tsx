@@ -5,14 +5,18 @@ import { MdxSource } from '@/types/mdx';
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import { MDXRemote } from 'next-mdx-remote';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   mdxSource: MdxSource;
 };
 
 export default function Page({ mdxSource }: Props) {
+  const { scope } = mdxSource;
+  const { title, description } = scope;
   return (
     <EffectsPage>
+      <Seo title={title} description={description} image={'/assets/image.png'} />
       <MDXRemote {...mdxSource} components={components} />
     </EffectsPage>
   );

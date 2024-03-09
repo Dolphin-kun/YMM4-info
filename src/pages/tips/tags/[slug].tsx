@@ -6,6 +6,7 @@ import { distinct } from '@/utils/distinct';
 import { Stack, Typography } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   frontmatters: FrontmatterWithPath[];
@@ -15,6 +16,7 @@ type Props = {
 export default function Page({ frontmatters, tag }: Props) {
   return (
     <DefaultPage>
+      <Seo title={'Tags'} description={'タグの一覧ページです'} image={'/assets/image.png'} />
       <Stack spacing={6}>
         <Typography variant="h1">Tag : {tag}</Typography>
         <Stack spacing={4}>
