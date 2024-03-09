@@ -146,7 +146,7 @@ export const components: {
       {...props}
     />
   ),
-  h1: (props: any) => <Typography variant="h1" {...props} />,
+  h1: (props: any) => <Typography variant="h1" sx={{ mb: '2rem' }} {...props} />,
   h2: (props: any) => (
     <Typography
       variant="h2"
