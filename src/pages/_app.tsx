@@ -114,16 +114,6 @@ const styles = {
   h1: {
     fontSize: 24,
     fontWeight: 500,
-    opacity: 0,
-    animation: "fadeIn 0.5s forwards",
-  },
-  "@keyframes fadeIn": {
-    "0%": {
-      opacity: 0,
-    },
-    "100%": {
-      opacity: 1,
-    },
   },
 } as const;
 
