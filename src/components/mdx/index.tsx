@@ -105,6 +105,8 @@ export const components: {
         border: 1,
         textAlign: 'center',
         margin: '1em 0em',
+        maxWidth: '100%',
+        minWidth: '50%',
         '> thead > tr > th':{
           backgroundColor:grey[100],
           border: 1,
