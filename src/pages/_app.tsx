@@ -54,38 +54,13 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   }, [router]);
 
   useEffect(() => {
-    const handleImagesLoad = () => {
-      const images = document.getElementsByTagName('img');
-      const totalImages = images.length;
-      let loadedImages = 0;
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
 
-      const onImageLoad = () => {
-        loadedImages++;
-        if (loadedImages === totalImages) {
-          setLoading(false);
-        }
-      };
-
-      for (let i = 0; i < totalImages; i++) {
-        if (images[i].complete) {
-          onImageLoad();
-        } else {
-          images[i].addEventListener('load', onImageLoad);
-        }
-      }
-    };
-
-    handleImagesLoad();
-
-    return () => {
-      const images = document.getElementsByTagName('img');
-      const totalImages = images.length;
-
-      for (let i = 0; i < totalImages; i++) {
-        images[i].removeEventListener('load', handleImagesLoad);
-      }
-    };
+    return () => clearTimeout(timer);
   }, []);
+
 
   return (
     <>
@@ -141,13 +116,14 @@ const styles = {
     height: "100vh",
     textAlign: "center",
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    justifyContent: center,
+    alignItems: center,
   },
 
   h1: {
     fontSize: 24,
     fontWeight: 500,
+    textAlign: center,
   },
 } as const;
 
