@@ -23,9 +23,9 @@ export const components: {
       component="li"
       sx={{
         listStyle: 'inside',
-        '> ul':{
+        '> li':{
           listStyle: 'circle',
-          margin: '0px'
+          marginLeft: '2rem'
         },
       }}
       {...props}
