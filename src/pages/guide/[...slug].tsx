@@ -16,7 +16,7 @@ export default function Page({ mdxSource }: Props) {
   const { title, description } = scope;
   return (
     <GuidePage>
-      <Seo title={title} description={description} image={'サムネイル.png'}/>
+      <Seo title={title} description={description} image={'image.png'}/>
       <MDXRemote {...mdxSource} components={components} />
     </GuidePage>
   );
