@@ -20,7 +20,7 @@ type Props = AppProps & {
 };
 
 function MyApp({ Component, emotionCache, pageProps }: Props) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const isHome = router.pathname === '/';
@@ -32,6 +32,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   useEffect(() => {
     const handleStart = () => {
       NProgress.start();
+      setLoading(true);
     };
     const handleComplete = () => {
       NProgress.done();
@@ -52,11 +53,9 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
     };
   }, [router]);
 
-  const allComponentsLoaded = !loading && isHome && isGuide && isEffects && isNews && isFaq;
-
   return (
     <>
-      {!allComponentsLoaded && (
+      {loading && (
       <div style={styles.loading}>
         <div>
           <h1 className="next-loading-h1" style={styles.h1}>
@@ -72,27 +71,27 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       <AppProvider emotionCache={emotionCache}>
         {isHome ? (
           <HomeLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </HomeLayout>
         ) : isGuide ? (
           <GuideLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </GuideLayout>
         ) : isEffects ? (
           <EffectsLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </EffectsLayout>
         ) : isNews ? (
           <NewsLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </NewsLayout>
         ) : isFaq ? (
           <FaqLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </FaqLayout>
         ) : (
           <DefaultLayout>
-            <Component {...pageProps} />
+            <Component {...pageProps} loading={loading} />
           </DefaultLayout>
         )}
       </AppProvider>
