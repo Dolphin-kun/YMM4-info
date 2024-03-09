@@ -16,7 +16,7 @@ export const components: {
     />
   ),
   ul: (props: any) => (
-    <List component="ul" sx={{ mt: 3, mb: 0, mt:0, fontSize: '15px' }} {...props} />
+    <List component="ul" sx={{ mt: 0, mb: 0, fontSize: '15px' }} {...props} />
   ),
   li: (props: any) => (
     <Box
