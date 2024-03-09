@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "postbuild":  "next-sitemap",
     "start": "next start",
     "lint": "eslint src --ext .tsx,.ts",
     "fix": "yarn lint --fix && yarn format",
