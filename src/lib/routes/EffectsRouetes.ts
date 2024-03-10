@@ -238,65 +238,195 @@ export const effectsRoutes: Routes = [
       },
       { 
         label: '影（内側）', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("クロマキー"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("影（内側）"),
       },
       { 
         label: '縁取り', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("減色"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("縁取り"),
       },
       { 
         label: '縁取り（内側）', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("斜めクリッピング"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("縁取り（内側）"),
       },
       { 
         label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("画像の貼り付け"),
       },
       { 
         label: '伸びる影', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("伸びる影"),
       },
       { 
         label: '前景塗りつぶし', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("前景塗りつぶし"),
       },
       { 
         label: '背景画像', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("背景画像"),
       },
       { 
         label: '背景塗りつぶし', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("背景塗りつぶし"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '網点影', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("網点影"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '網点影（内側）', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("網点影（内側）"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '網点縁取り', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("網点縁取り"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '網点境界ぼかし', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("網点境界ぼかし"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '立体化', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("立体化"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: '枠線', 
+        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("枠線"),
+      },
+    ],
+  },
+  {
+    label: '登場退出',
+    pages: [
+      { 
+        label: 'フェードイン・フェードアウト', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("フェードイン・フェードアウト"),
       },
       { 
-        label: '画像の貼り付け', 
-        path: '/effects/'+encodeURIComponent("装飾")+'/'+encodeURIComponent("図形切り抜き"),
+        label: 'ぼかしを解除しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("ぼかしを解除しながら登場退出"),
       },
-
+      { 
+        label: 'モザイクを解除しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("モザイクを解除しながら登場退出"),
+      },
+      { 
+        label: '移動しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("移動しながら登場退出"),
+      },
+      { 
+        label: '画面外から登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("画面外から登場退出"),
+      },
+      { 
+        label: '回転しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("回転しながら登場退出"),
+      },
+      { 
+        label: '拡大縮小しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("拡大縮小しながら登場退出"),
+      },
+      { 
+        label: '起き上がりながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("起き上がりながら登場退出"),
+      },
+      { 
+        label: '境界ぼかしを解除しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("境界ぼかしを解除しながら登場退出"),
+      },
+      { 
+        label: '傾斜変形しながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("傾斜変形しながら登場退出"),
+      },
+      { 
+        label: '砕け散りながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("砕け散りながら登場退出"),
+      },
+      { 
+        label: '場面切り替え（ルール画像）', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("場面切り替え（ルール画像）"),
+      },
+      { 
+        label: '跳ねながら登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("跳ねながら登場退出"),
+      },
+      { 
+        label: '領域外から登場退出', 
+        path: '/effects/'+encodeURIComponent("登場退出")+'/'+encodeURIComponent("領域外から登場退出"),
+      },
+    ],
+  },
+  {
+    label: '配置',
+    pages: [
+      { 
+        label: 'ランダム配置', 
+        path: '/effects/'+encodeURIComponent("配置")+'/'+encodeURIComponent("ランダム配置"),
+      },
+      { 
+        label: '円形配列', 
+        path: '/effects/'+encodeURIComponent("配置")+'/'+encodeURIComponent("円形配列"),
+      },
+      { 
+        label: '敷き詰め', 
+        path: '/effects/'+encodeURIComponent("配置")+'/'+encodeURIComponent("敷き詰め"),
+      },
+      { 
+        label: '複製して反転', 
+        path: '/effects/'+encodeURIComponent("配置")+'/'+encodeURIComponent("複製して反転"),
+      },
+    ],
+  },
+  {
+    label: '描画',
+    pages: [
+      { 
+        label: '3D回転', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("3D回転"),
+      },
+      { 
+        label: '画面に収まるように拡大縮小', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("画面に収まるように拡大縮小"),
+      },
+      { 
+        label: '拡大縮小', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("拡大縮小"),
+      },
+      { 
+        label: '極座標変換', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("極座標変換"),
+      },
+      { 
+        label: '極座標変換（描画位置）', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("極座標変換（描画位置）"),
+      },
+      { 
+        label: '傾斜変形', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("傾斜変形"),
+      },
+      { 
+        label: '遅延エフェクトを描画', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("遅延エフェクトを描画"),
+      },
+      { 
+        label: '中心位置', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("中心位置"),
+      },
+      { 
+        label: '描画位置', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("描画位置"),
+      },
+      { 
+        label: '描画位置（極座標）', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("描画位置（極座標）"),
+      },
+      { 
+        label: '不透明度', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("不透明度"),
+      },
+      { 
+        label: '余白追加', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("余白追加"),
+      },
     ],
   },
 ];
