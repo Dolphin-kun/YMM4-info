@@ -15,7 +15,6 @@ export const HomePage = ({
   frontmatters,
   title,
   description,
-  image,
 }: Props) => {
   return (
     <>
