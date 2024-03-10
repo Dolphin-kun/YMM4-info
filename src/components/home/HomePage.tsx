@@ -39,13 +39,13 @@ export const HomePage = ({
           <LinkButton href="/guide/overview">YMM4情報サイトとは</LinkButton>
         </Stack>
         {spacer}
-        <Stack alignItems="flex-start" spacing={8} css={{display: 'grid'}}>
+        <Stack alignItems="flex-start" spacing={8}>
           <Typography variant="h2">Tips</Typography>
           <Typography css={paragraphStyles}>
           YMM4に関係する機能や編集のコツなど
           <br />
           </Typography>
-          <Stack spacing={4} css={{ overflowX: 'auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)'}}>
+          <Stack spacing={4}>
             {frontmatters.map((frontmatter) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
