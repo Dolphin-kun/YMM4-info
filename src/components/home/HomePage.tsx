@@ -46,11 +46,11 @@ export const HomePage = ({
           <br />
           </Typography>
           <Stack spacing={4}>
-            <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-            {frontmatters.map((frontmatter,index) => { 
+            <Grid container spacing={{ xs: 2, md: 2 }}>
+            {frontmatters.map((frontmatter) => { 
               const { title, description, author, image, date, path } =
                 frontmatter;
-              <Grid item xs={2} sm={4} md={4} key={index}>
+              <Grid item xs={2} sm={4} md={4}>
               return (
                 <PostCard
                   key={path}
