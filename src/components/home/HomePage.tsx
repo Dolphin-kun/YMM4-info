@@ -36,7 +36,7 @@ export const HomePage = ({
             <br />
             非公式です。
           </Typography>
-          <LinkButton href="/guide/overview">YMM4 基本機能</LinkButton>
+          <LinkButton href="/guide/overview">YMM4情報サイトとは</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
