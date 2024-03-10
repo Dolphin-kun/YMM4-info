@@ -45,13 +45,14 @@ export const HomePage = ({
           YMM4に関係する機能や編集のコツなど
           <br />
           </Typography>
-          <Stack spacing={4}>
-            <Grid container spacing={{ xs: 2, md: 2 }}>
-            {frontmatters.map((frontmatter) => { 
+          <Stack spacing={4} css={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '20px', overflowX: 'scroll', '>:not(style)~:not(style)':{marginTop: '0px'}}}>
+          <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            {frontmatters.map((frontmatter) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
-              <Grid item xs={2} sm={4} md={4}>
+
               return (
+                <Grid item xs={2} sm={4} md={4}>
                 <PostCard
                   key={path}
                   title={title}
@@ -61,10 +62,10 @@ export const HomePage = ({
                   image={image}
                   href={path}
                 />
+                </Grid>
               );
-              </Grid>
             })}
-            </Grid>
+          </Grid>
           </Stack>
           <LinkButton href="/tips/page/1">See More Tips</LinkButton>
         </Stack>
