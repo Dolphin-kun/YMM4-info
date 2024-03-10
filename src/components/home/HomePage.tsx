@@ -19,7 +19,7 @@ export const HomePage = ({
 }: Props) => {
   return (
     <>
-      <Seo title={title} description={description} image={image} />
+      <Seo title={title} description={description} image={'サムネイル.png'} />
       <Box sx={{ userSelect: 'none', py: 24 }}>
         <Stack alignItems="flex-start" spacing={8}>
           <Stack>
