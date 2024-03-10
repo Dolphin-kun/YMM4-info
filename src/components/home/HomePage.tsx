@@ -2,7 +2,7 @@ import { SITE_NAME } from '@/config/app';
 import { theme } from '@/styles/theme';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { css } from '@emotion/react';
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography, Grid } from '@mui/material';
 import { PostCard } from '../PostCard';
 import { Seo } from '../Seo';
 import { LinkButton } from './LinkButton';
@@ -45,8 +45,10 @@ export const HomePage = ({
           YMM4に関係する機能や編集のコツなど
           <br />
           </Typography>
-          <Stack spacing={4} css={{ width: '100%', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridGap: '20px', overflowX: 'scroll', '>:not(style)~:not(style)':{marginTop: '0px'}}}>
+          <Stack spacing={4} css={{ width: '100%', overflowX: 'scroll', '>:not(style)~:not(style)':{marginTop: '0px'}}}>
+          <Grid container spacing={{ xs: 2, md: 2 }} columns={{ xs: 4, sm: 8, md: 12 }}>
             {frontmatters.map((frontmatter) => {
+              <Grid item xs={2} sm={4} md={4} key={index}>
               const { title, description, author, image, date, path } =
                 frontmatter;
 
@@ -61,7 +63,9 @@ export const HomePage = ({
                   href={path}
                 />
               );
+              </Grid>
             })}
+            </Grid>
           </Stack>
           <LinkButton href="/tips/page/1">See More Tips</LinkButton>
         </Stack>
