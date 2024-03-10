@@ -43,9 +43,6 @@ export default function Page({ mdxSource }: Props) {
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
       </Box>
-      <Stack>
-        
-      </Stack>
     </DefaultPage>
   );
 }
