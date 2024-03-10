@@ -76,6 +76,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       )}
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="google-site-verification" content="dGAOo4Shts_OYHNeo1GldFi0Qa4TlrdqD5XcGIbB03Q" />
       </Head>
       <AppProvider emotionCache={emotionCache}>
         {isHome ? (
