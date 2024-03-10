@@ -67,9 +67,10 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
       {loading && (
       <div style={styles.loading}>
         <div>
-          <h1 className="next-loading-h1" style={styles.h1}>
-            Loading...
-          </h1>
+        <video autoPlay loop muted style={styles.video}>
+          <source src="/assets/Loading.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+          </video>
         </div>
       </div>
       )}
@@ -124,6 +125,11 @@ const styles = {
     fontSize: 24,
     fontWeight: 500,
     textAlign: "center",
+  },
+  video: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
 } as const;
 
