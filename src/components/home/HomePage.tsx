@@ -39,7 +39,7 @@ export const HomePage = ({
           <LinkButton href="/guide/overview">YMM4情報サイトとは</LinkButton>
         </Stack>
         {spacer}
-        <Stack alignItems="flex-start" spacing={8}>
+        <Stack alignItems="flex-start" spacing={8} css={{display: 'grid'}}>
           <Typography variant="h2">Tips</Typography>
           <Typography css={paragraphStyles}>
           YMM4に関係する機能や編集のコツなど
