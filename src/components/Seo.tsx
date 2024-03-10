@@ -45,7 +45,7 @@ export const Seo = ({
       }}
       additionalLinkTags={[
         { rel: 'icon', type: 'image/x-icon', href: 'https://ymm4-info.vercel.app/favicon.ico' },
-        { rel= 'shortcut icon',  type: 'image/x-icon', href: 'https://ymm4-info.vercel.app/favicon.ico'},
+        { rel: 'shortcut icon',  type: 'image/x-icon', href: 'https://ymm4-info.vercel.app/favicon.ico'},
         { rel: 'apple-touch-icon', type: 'image/png', href: 'https://ymm4-info.vercel.app/assets/image.png', sizes: '76x76'},
       ]}
     />
