@@ -46,7 +46,7 @@ export const HomePage = ({
           <br />
           </Typography>
           <Stack spacing={4}>
-          <Grid container spacing={2}>
+          <Grid container>
             {frontmatters.map((frontmatter,index) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
