@@ -46,13 +46,13 @@ export const HomePage = ({
           <br />
           </Typography>
           <Stack spacing={4} css={{ width: '100%', overflowX: 'scroll', '>:not(style)~:not(style)':{marginTop: '0px'}}}>
-          <Grid container spacing={{ xs: 2, md: 4 }} columns={{ xs: 4, sm: 8, md: 12}}>
+          <Grid container spacing={{ xs: 1, md: 4 }} columns={{ xs: 1, md: 4}}>
             {frontmatters.map((frontmatter,index) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
 
               return (
-                <Grid item xs={2} sm={4} md={4} key={index}>
+                <Grid item xs={1} md={4} key={index}>
                 <PostCard
                   key={path}
                   title={title}
