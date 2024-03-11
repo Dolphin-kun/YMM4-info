@@ -21,7 +21,7 @@ export default function Page({ frontmatters, tag }: Props) {
         <Typography variant="h1">Tag : {tag}</Typography>
         <Stack spacing={4}>
         <Grid container spacing={2}>
-          {frontmatters.map((frontmatter) => {
+          {frontmatters.map((frontmatter,index) => {
             const { title, description, author, image, date, path } =
               frontmatter;
 
