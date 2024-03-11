@@ -13,6 +13,7 @@ type Props = {
 export default function Page({ tags }: Props) {
   return (
     <DefaultPage>
+      <Seo title={'Tags'} description={'タグの一覧ページです'} image={'サムネイル.png'} />
       <Stack spacing={6}>
         <Typography variant="h1">Tags</Typography>
         <Stack direction="row" flexWrap="wrap" spacing={2}>
