@@ -46,7 +46,7 @@ export const HomePage = ({
           <br />
           </Typography>
           <Stack spacing={4}>
-          <Grid container spacing={{ xs: 1, sm:2, md: 2 }} columns={{ xs: 1, sm:2, md: 2}}>
+          <Grid container spacing={{ xs: 1, md: 2, lg:2 }} columns={{ xs: 1, md: 2, lg:2 }}>
             {frontmatters.map((frontmatter,index) => {
               const { title, description, author, image, date, path } =
                 frontmatter;
