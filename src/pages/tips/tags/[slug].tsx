@@ -3,7 +3,7 @@ import { PostCard } from '@/components/PostCard';
 import { getAllFrontmatters } from '@/lib/mdx';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { distinct } from '@/utils/distinct';
-import { Stack, Typography } from '@mui/material';
+import { Stack, Typography, Grid } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
 import { Seo } from '@/components/Seo';
@@ -20,11 +20,13 @@ export default function Page({ frontmatters, tag }: Props) {
       <Stack spacing={6}>
         <Typography variant="h1">Tag : {tag}</Typography>
         <Stack spacing={4}>
+        <Grid container spacing={2}>
           {frontmatters.map((frontmatter) => {
             const { title, description, author, image, date, path } =
               frontmatter;
 
             return (
+              <Grid item xs={12} md={6} key={index}>
               <PostCard
                 key={description}
                 title={title}
@@ -34,8 +36,10 @@ export default function Page({ frontmatters, tag }: Props) {
                 image={image}
                 href={path}
               />
+              </Grid>
             );
           })}
+          </Grid>
         </Stack>
       </Stack>
     </DefaultPage>
