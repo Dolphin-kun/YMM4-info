@@ -5,6 +5,7 @@ import { distinct } from '@/utils/distinct';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/system';
 import { GetStaticProps } from 'next';
+import { Seo } from '@/components/Seo';
 
 type Props = {
   tags: string[];
