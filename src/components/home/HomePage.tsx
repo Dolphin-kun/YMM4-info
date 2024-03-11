@@ -45,7 +45,7 @@ export const HomePage = ({
           YMM4に関係する機能や編集のコツなど
           <br />
           </Typography>
-          <Stack spacing={4} css={{ width: '100%', overflowX: 'scroll', '>:not(style)~:not(style)':{marginTop: '0px'}}}>
+          <Stack spacing={4}>
           <Grid container spacing={{ xs: 1, md: 4 }} columns={{ xs: 1, md: 4}}>
             {frontmatters.map((frontmatter,index) => {
               const { title, description, author, image, date, path } =
