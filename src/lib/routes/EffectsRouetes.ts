@@ -389,7 +389,7 @@ export const effectsRoutes: Routes = [
       },
       { 
         label: '画面に収まるように拡大縮小', 
-        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("画面に収まるように拡大縮小"),
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("画面内に収まるように拡大縮小"),
       },
       { 
         label: '拡大縮小', 
