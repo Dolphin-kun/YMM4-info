@@ -52,7 +52,7 @@ export const HomePage = ({
                 frontmatter;
 
               return (
-                <Grid item xs={1} md={4} key={index}>
+                <Grid item xs={1} md={4} key={index} css={{maxWidth:'50%'}}>
                 <PostCard
                   key={path}
                   title={title}
