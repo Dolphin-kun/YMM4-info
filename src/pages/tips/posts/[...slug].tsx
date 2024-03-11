@@ -2,6 +2,7 @@ import { DefaultPage } from '@/components/default';
 import { Image } from '@/components/Image';
 import { components } from '@/components/mdx';
 import { PostTag } from '@/components/PostTag';
+import { PostCard } from '@/components/PostCard';
 import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
