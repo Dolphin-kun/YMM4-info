@@ -34,7 +34,7 @@ export const CodeBlock = ({ children }: Props) => {
     return (
       <TwitterTimelineEmbed
       sourceType="profile"
-      screenName={code as string}
+      userId={code as string}
       options={{height: 800}}
       />
     );
