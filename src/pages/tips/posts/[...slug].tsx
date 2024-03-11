@@ -4,6 +4,7 @@ import { components } from '@/components/mdx';
 import { PostTag } from '@/components/PostTag';
 import { Share } from '@/components/Share';
 import { getAllPaths, getMdxBySlug } from '@/lib/mdx';
+import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { theme } from '@/styles/theme';
 import { MdxSource } from '@/types/mdx';
 import { formatDate } from '@/utils/date';
@@ -15,9 +16,10 @@ import { Seo } from '@/components/Seo';
 
 type Props = {
   mdxSource: MdxSource;
+  frontmatters: FrontmatterWithPath[];
 };
 
-export default function Page({ mdxSource }: Props) {
+export default function Page({ mdxSource, frontmatters }: Props) {
   const matches = useMediaQuery(theme.breakpoints.up('md'));
 
   const { scope } = mdxSource;
@@ -43,6 +45,24 @@ export default function Page({ mdxSource }: Props) {
       <Box sx={{ pt: 6 }}>
         <MDXRemote {...mdxSource} components={components} />
       </Box>
+      <Stack spacing={4}>
+          {frontmatters.map((frontmatter) => {
+            const { title, description, author, image, date, path } =
+              frontmatter;
+
+            return (
+              <PostCard
+                key={description}
+                title={title}
+                description={description}
+                author={author}
+                date={date}
+                image={image}
+                href={path}
+              />
+            );
+          })}
+        </Stack>
     </DefaultPage>
   );
 }
