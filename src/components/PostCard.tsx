@@ -30,7 +30,7 @@ export const PostCard = ({
   const matches = useMediaQuery(theme.breakpoints.up('sm'));
 
   return (
-    <Card variant="outlined" css={{ width: '40em' }}>
+    <Card variant="outlined">
       <Link href={href}>
         <Stack sx={{ py: 3, px: 6 }}>
           {date && (
