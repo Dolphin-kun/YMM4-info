@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild":  "next-sitemap",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint src --ext .tsx,.ts",
     "fix": "yarn lint --fix && yarn format",
@@ -40,6 +40,7 @@
     "react-dom": "^18.2.0",
     "react-share": "^5.0.3",
     "react-syntax-highlighter": "^15.5.0",
+    "react-twitter-embed": "^4.0.4",
     "react-youtube": "^10.1.0",
     "rehype-slug": "^5.1.0",
     "remark-breaks": "^4.0.0",

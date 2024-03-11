@@ -4,6 +4,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import a11yDark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
 import { CopyCodeButton } from './CopyCodeButton';
 import YouTube from 'react-youtube';
+import { TwitterTimelineEmbed, TwitterTweetEmbed } from "react-twitter-embed";
 
 type Code = {
   props: {
@@ -27,7 +28,25 @@ export const CodeBlock = ({ children }: Props) => {
             <YouTube videoId={code as string} />
         </div>
     );
-}
+  }
+
+  if (language === 'twitter-timeline') {
+    return (
+      <TwitterTimelineEmbed
+      sourceType="profile"
+      screenName={code as string}
+      options={{height: 800}}
+      />
+    );
+  }
+
+  if (language === 'twitter') {
+    return (
+      <TwitterTweetEmbed
+      tweetId={code as string}
+      />
+    );
+  }
 
   return (
     <Box sx={{ mt: 6, mb: 4 }}>
