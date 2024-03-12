@@ -23,7 +23,7 @@ export const guideRoutes: Routes = [
     pages: [
       {
         label: '基本的な操作',
-        path: '/guide/' + encodeURIComponent("基本機能") + '/operation',
+        path: '/guide/' + encodeURIComponent("基本機能") + encodeURIComponent("メイン画面"),
       },
       {
         label: 'エフェクトアイテムの使い方',
