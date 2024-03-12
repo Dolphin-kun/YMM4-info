@@ -22,7 +22,7 @@ export const guideRoutes: Routes = [
     label: '基本機能',
     pages: [
       {
-        label: '基本的な操作',
+        label: 'メイン画面',
         path: '/guide/' + encodeURIComponent("基本機能") +'/'+ encodeURIComponent("メイン画面"),
       },
       {
