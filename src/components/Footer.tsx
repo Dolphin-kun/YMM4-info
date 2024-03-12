@@ -33,15 +33,19 @@ export const Footer = () => {
               </Typography>
             </Link>
             <Stack direction="row" justifyContent="center" spacing={5}>
+              {/*
               <Link href="#" aria-label="link to GitHub Account">
                 <GitHub sx={{ fontSize: 32 }} />
               </Link>
+              */}
               <Link href="https://x.com/YMM4_info" aria-label="link to X(Twitter) Account">
                 <X sx={{ fontSize: 32 }} />
               </Link>
+              {/*
               <Link href="#" aria-label="link to Google Account">
                 <Google sx={{ fontSize: 32 }} />
               </Link>
+            */}
             </Stack>
           </Stack>
           <Typography component="small" fontSize={14}>
