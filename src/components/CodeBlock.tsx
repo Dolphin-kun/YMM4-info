@@ -30,7 +30,7 @@ export const CodeBlock = ({ children }: Props) => {
     );
   }
 
-  if (language === 'twitter-timeline') {
+  if (language === 'twitterTimeline') {
     return (
       <Timeline
       dataSource={{ sourceType: "profile", screenName: code }}
