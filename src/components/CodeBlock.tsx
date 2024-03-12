@@ -39,7 +39,7 @@ export const CodeBlock = ({ children }: Props) => {
     );
   }
 
-  if (language === 'twitter') {
+  if (language === 'tweet') {
     return (
       <Tweet tweetId={code as string} />
     );
