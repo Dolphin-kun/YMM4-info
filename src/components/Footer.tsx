@@ -1,5 +1,5 @@
 import { SITE_NAME } from '@/config/app';
-import { GitHub, Google, X } from '@mui/icons-material';
+import { X } from '@mui/icons-material';
 import { Box, Stack, Typography } from '@mui/material';
 import { Container } from './Container';
 import { Link } from './Link';
