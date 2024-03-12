@@ -10,8 +10,8 @@
 
 ## site
 
-https://ymm4-info.vercel.app  
-https://ymm-info.vercel.app
+https://ymm4-info.net
+https://ymm-info.site
 
 ## License
 

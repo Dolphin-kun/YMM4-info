@@ -44,9 +44,9 @@ export const Seo = ({
         cardType: 'summary_large_image',
       }}
       additionalLinkTags={[
-        { rel: 'icon', type: 'image/x-icon', href: 'https://ymm4-info.vercel.app/favicon.ico' },
-        { rel: 'shortcut icon',  type: 'image/x-icon', href: 'https://ymm4-info.vercel.app/favicon.ico'},
-        { rel: 'apple-touch-icon', type: 'image/png', href: 'https://ymm4-info.vercel.app/assets/image.png', sizes: '76x76'},
+        { rel: 'icon', type: 'image/x-icon', href: 'https://ymm4-info.net/favicon.ico' },
+        { rel: 'shortcut icon',  type: 'image/x-icon', href: 'https://ymm4-info.net/favicon.ico'},
+        { rel: 'apple-touch-icon', type: 'image/png', href: 'https://ymm4-info.net/assets/image.png', sizes: '76x76'},
       ]}
     />
   );
