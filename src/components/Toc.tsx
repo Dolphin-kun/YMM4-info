@@ -47,6 +47,9 @@ export const Toc = () => {
                   '[data-level="2"] ~ [data-level="3"] &': {
                     marginLeft: theme.spacing(5),
                   },
+                  '[data-level="3"] ~ [data-level="4"] &': {
+                    marginLeft: theme.spacing(8),
+                  },
                 }}
               >
                 <Typography fontSize="0.9rem" color={theme.palette.grey[800]}>
