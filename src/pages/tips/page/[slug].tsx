@@ -4,7 +4,7 @@ import { PostTag } from '@/components/PostTag';
 import { getAllFrontmatters } from '@/lib/mdx';
 import { FrontmatterWithPath } from '@/types/fromtmatter';
 import { distinct } from '@/utils/distinct';
-import { Pagination, Stack, Typography } from '@mui/material';
+import { Pagination, Stack, Typography, Grid } from '@mui/material';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/dist/client/router';
 import { NextParsedUrlQuery } from 'next/dist/server/request-meta';
@@ -66,11 +66,13 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
           />
         </Stack>
         <Stack spacing={4}>
-          {frontmatters.map((frontmatter) => {
+        <Grid container spacing={2}>
+          {frontmatters.map((frontmatter, index) => {
             const { title, description, author, image, date, path } =
               frontmatter;
 
             return (
+              <Grid item xs={12} md={6} key={index}>
               <PostCard
                 key={path}
                 title={title}
@@ -80,8 +82,10 @@ export default function Page({ frontmatters, pagesCount, tags }: Props) {
                 image={image}
                 href={path}
               />
+              </Grid>
             );
           })}
+          </Grid>
           <Stack direction="row" justifyContent="center">
             <Pagination count={pagesCount} onChange={handleChange} />
           </Stack>
