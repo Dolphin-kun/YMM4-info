@@ -10,11 +10,11 @@ export const guideRoutes: Routes = [
     pages: [
       {
         label: '概要',
-        path: '/guide/YMM4/overview',
+        path: '/guide/YMM4/' + encodeURIComponent("YMM4とは"),
       },
       {
         label: '導入方法',
-        path: '/guide/YMM4/start-up',
+        path: '/guide/YMM4/' + encodeURIComponent("導入方法"),
       },
     ],
   },
