@@ -118,12 +118,12 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  },
-
-  h1: {
-    fontSize: 24,
-    fontWeight: 500,
-    textAlign: "center",
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 9999,
   },
   video: {
     width: '100%',
