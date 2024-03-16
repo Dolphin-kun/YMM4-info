@@ -43,7 +43,6 @@ export const DefaultLayout = ({ children }: Props) => {
         }}
       >
         <Footer />
-      <Analytics />
       </Box>
     </Stack>
   );
