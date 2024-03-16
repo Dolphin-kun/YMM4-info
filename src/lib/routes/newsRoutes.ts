@@ -14,15 +14,6 @@ export const newsRoutes: Routes = [
       },
     ],
   },
-  {
-    label: 'バグ・不具合',
-    pages: [
-      {
-        label:'エフェクト',
-        path:'/news/bug/Effects',
-      },
-    ],
-  },
 ];
 
 export const allNewsRoutes: Routes = newsRoutes.flatMap((route) =>
