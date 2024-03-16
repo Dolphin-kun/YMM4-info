@@ -77,7 +77,7 @@ export const HomePage = ({
             <br />
             いざ！YMM4の世界へ！
           </Typography>
-          <LinkButton href="/guide/YMM4/overview">Get Started</LinkButton>
+          <LinkButton href="/guide/YMM4/導入方法">Get Started</LinkButton>
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>

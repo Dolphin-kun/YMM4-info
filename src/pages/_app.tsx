@@ -113,6 +113,7 @@ const styles = {
   loading: {
     fontFamily:
       'system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"',
+    width:"100%",
     height: "100vh",
     textAlign: "center",
     display: "flex",
