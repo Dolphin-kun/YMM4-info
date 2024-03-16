@@ -26,7 +26,6 @@
     "@mui/material": "^5.15.0",
     "@next/mdx": "^13.1.6",
     "@radix-ui/react-scroll-area": "^1.0.2",
-    "@vercel/analytics": "^1.1.0",
     "copy-to-clipboard": "^3.3.3",
     "glob": "^8.1.0",
     "gray-matter": "^4.0.3",
