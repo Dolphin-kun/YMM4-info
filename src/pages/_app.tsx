@@ -124,8 +124,7 @@ const styles = {
     zIndex: 9999,
   },
   video: {
-    width: '100%',
-    height: '100%',
+    height: '100vh',
     objectFit: 'cover',
     pointerEvents: 'none',
   },
