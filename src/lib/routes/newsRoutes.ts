@@ -10,7 +10,11 @@ export const newsRoutes: Routes = [
     pages: [
       {
         label:'v4.26.0.0',
-        path:'/news/update/4.26.0.0',
+        path:'/news/update/4.26.x',
+      },
+      {
+        label:'v4.27.0.0',
+        path:'/news/update/4.27.x',
       },
     ],
   },
