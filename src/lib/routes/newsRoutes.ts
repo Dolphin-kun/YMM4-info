@@ -9,11 +9,11 @@ export const newsRoutes: Routes = [
     label: 'アップデート情報',
     pages: [
       {
-        label:'v4.26.0.0',
+        label:'v4.26.x',
         path:'/news/update/4.26.x',
       },
       {
-        label:'v4.27.0.0',
+        label:'v4.27.x',
         path:'/news/update/4.27.x',
       },
     ],
