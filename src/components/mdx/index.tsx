@@ -45,6 +45,7 @@ export const components: {
       component="hr"
       sx={{
         margin: '4em 0em',
+        visibility: "hidden"
       }}
       {...props}
     />
