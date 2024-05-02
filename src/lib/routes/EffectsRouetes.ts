@@ -388,6 +388,10 @@ export const effectsRoutes: Routes = [
         path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("プレビュー時にのみ表示"),
       },
       { 
+        label: 'メッシュ変形', 
+        path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("メッシュ変形"),
+      },
+      { 
         label: '画面に収まるように拡大縮小', 
         path: '/effects/'+encodeURIComponent("描画")+'/'+encodeURIComponent("画面内に収まるように拡大縮小"),
       },
