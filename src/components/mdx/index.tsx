@@ -44,7 +44,7 @@ export const components: {
     <Box
       component="hr"
       sx={{
-        margin: '4em 0em',
+        margin: '2.5em 0em',
         visibility: "hidden"
       }}
       {...props}
