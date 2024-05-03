@@ -37,7 +37,7 @@ export const Footer = () => {
               <Link href="https://x.com/YMM4_info" aria-label="link to X(Twitter) Account">
                 <X sx={{ fontSize: 32 }} />
               </Link>
-              <Link href="https://discord.gg/De56CXbpm6" aria-label="link to Disocrd Server">
+              <Link href="https://discord.gg/De56CXbpm6" aria-label="link to Disocrd Server" sx={{marginTop: "4px"}}>
               <Image
                 src="/assets/discordIcon.png"
                 width={32}
