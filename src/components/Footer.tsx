@@ -39,7 +39,7 @@ export const Footer = () => {
               </Link>
               <Link href="https://discord.gg/De56CXbpm6" aria-label="link to Disocrd Server">
               <Image
-                src="/discordIcon.png"
+                src="/assets/discordIcon.png"
                 width={25}
                 height={25}
                 alt="link to Disocrd Server"
