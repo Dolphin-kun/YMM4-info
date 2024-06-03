@@ -216,6 +216,10 @@ export const effectsRoutes: Routes = [
         path: '/effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("クロマキー"),
       },
       { 
+        label: 'モーショントラッキング', 
+        path: '/effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("モーショントラッキング"),
+      },
+      { 
         label: '減色', 
         path: '/effects/'+encodeURIComponent("合成")+'/'+encodeURIComponent("減色"),
       },
