@@ -10,10 +10,6 @@ export const globalRoutes: Routes = [
     path: '/guide/overview',
   },
   {
-    label: 'News',
-    path: '/news/overview',
-  },
-  {
     label: 'Effects',
     path: '/effects/overview',
   },

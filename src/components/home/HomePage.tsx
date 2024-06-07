@@ -81,14 +81,6 @@ export const HomePage = ({
         </Stack>
         {spacer}
         <Stack alignItems="flex-start" spacing={8}>
-          <Typography variant="h2">News</Typography>
-          <Typography css={paragraphStyles}>
-            アップデートや、バグ・エラーなどの情報をまとめています。
-          </Typography>
-          <LinkButton href="/news/overview">News</LinkButton>
-        </Stack>
-        {spacer}
-        <Stack alignItems="flex-start" spacing={8}>
           <Typography variant="h2">Effects</Typography>
           <Typography css={paragraphStyles}>
            YMM4にあるエフェクト一覧です。
