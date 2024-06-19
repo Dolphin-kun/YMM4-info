@@ -49,6 +49,7 @@ export const CodeBlock = ({ children }: Props) => {
   if (language === "link") {
     return (
       console.log(code)
+      <PostCard>
     )
   }
 
