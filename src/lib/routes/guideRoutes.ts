@@ -25,10 +25,6 @@ export const guideRoutes: Routes = [
         label: 'メイン画面',
         path: '/guide/' + encodeURIComponent("基本機能") +'/'+ encodeURIComponent("メイン画面"),
       },
-      {
-        label: 'エフェクトアイテムの使い方',
-        path: '/guide/' + encodeURIComponent("基本機能") + '/effect-item',
-      },
     ],
   },
 ];
