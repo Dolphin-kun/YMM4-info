@@ -5,6 +5,7 @@ import a11yDark from 'react-syntax-highlighter/dist/cjs/styles/prism/a11y-dark';
 import { CopyCodeButton } from './CopyCodeButton';
 import YouTube from 'react-youtube';
 import { Timeline , Tweet } from "react-twitter-widgets";
+import { PostCard } from './PostCard';
 
 type Code = {
   props: {
@@ -43,6 +44,12 @@ export const CodeBlock = ({ children }: Props) => {
     return (
       <Tweet tweetId={code as string} />
     );
+  }
+
+  if (language === "link") {
+    return (
+      console.log(code)
+    )
   }
 
   return (
