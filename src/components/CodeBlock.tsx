@@ -47,15 +47,9 @@ export const CodeBlock = ({ children }: Props) => {
   }
 
   if (language === "link") {
-    console.log(code);
     return (
       <PostCard
-      title={title}
-      description={description}
-      author={author}
-      date={date}
-      image={image}
-      href={path}
+      href={code}
       />
     )
   }
