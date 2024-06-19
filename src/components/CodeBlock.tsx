@@ -25,9 +25,7 @@ export const CodeBlock = ({ children }: Props) => {
 
   if (language === 'youtube') {
     return (
-        <div className='youtube-wrap'>
-            <YouTube videoId={code as string} />
-        </div>
+      <YouTube videoId={code as string} />
     );
   }
 
@@ -47,16 +45,25 @@ export const CodeBlock = ({ children }: Props) => {
   }
 
   if (language === "link") {
+    // JSON形式でデータをパースする
+    let postCardData;
+    try {
+      postCardData = JSON.parse(code);
+    } catch (error) {
+      console.error('Invalid JSON format for link:', code);
+      return null;
+    }
+
     return (
       <PostCard
-      title=""
-      description=""
-      author=""
-      date=""
-      image=""
-      href={code}
+        title={postCardData.title || ''}
+        description={postCardData.description || ''}
+        author={postCardData.author || ''}
+        date={postCardData.date || ''}
+        image={postCardData.image || ''}
+        href={postCardData.href}
       />
-    )
+    );
   }
 
   return (
