@@ -2,7 +2,7 @@ import { Routes } from './type';
 
 export const globalRoutes: Routes = [
   {
-    label:'YMM4講座 特設ページ'
+    label:'YMM4講座 特設ページ',
     path: '/' + encodeURIComponent("Live講座") + '/overview',
   }
   {
