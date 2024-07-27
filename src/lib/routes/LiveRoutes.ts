@@ -3,7 +3,7 @@ import { Routes } from './type';
 export const LiveRoutes: Routes = [
   {
     label: '概要',
-    path: '/Live/overview',
+    path: '/' + encodeURIComponent("Live講座") + '/overview',
   },
 ];
 
