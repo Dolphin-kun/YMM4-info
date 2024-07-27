@@ -3,6 +3,7 @@ import { GuideLayout } from '@/components/guide';
 import { EffectsLayout } from '@/components/Effects';
 import { NewsLayout } from '@/components/news';
 import { FaqLayout } from '@/components/faq';
+import { LiveLayout } from '@/components/Live';
 import { HomeLayout } from '@/components/home';
 import { AppProvider } from '@/providers/app';
 import { EmotionCache } from '@emotion/react';
@@ -28,6 +29,7 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
   const isEffects = router.pathname.includes('/effects');
   const isNews = router.pathname.includes('/news');
   const isFaq = router.pathname.includes('/faq');
+  const isLive = router.pathname.includes('/Live');
 
   useEffect(() => {
     const handleStart = () => {
@@ -98,6 +100,10 @@ function MyApp({ Component, emotionCache, pageProps }: Props) {
           <FaqLayout>
             <Component {...pageProps} loading={loading} />
           </FaqLayout>
+        ) : isLive ? (
+          <LiveLayout>
+            <Component {...pageProps} loading={loading} />
+          </LiveLayout>
         ) : (
           <DefaultLayout>
             <Component {...pageProps} loading={loading} />
