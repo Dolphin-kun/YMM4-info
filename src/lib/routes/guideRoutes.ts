@@ -25,6 +25,10 @@ export const guideRoutes: Routes = [
         label: 'メイン画面',
         path: '/guide/' + encodeURIComponent("基本機能") +'/'+ encodeURIComponent("メイン画面"),
       },
+      {
+        label: '文字揃え',
+        path: '/guide/' + encodeURIComponent("基本機能") +'/'+ encodeURIComponent("文字揃え"),
+      },
     ],
   },
 ];
